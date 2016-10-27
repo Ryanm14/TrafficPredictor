@@ -1,0 +1,146 @@
+[
+ {
+   "Time": "0:00",
+   "Minimum": 722,
+   "Mean": 1714.8,
+   "Maximum": 2446
+ },
+ {
+   "Time": "1:00",
+   "Minimum": 383,
+   "Mean": 1170.4,
+   "Maximum": 1659
+ },
+ {
+   "Time": "2:00",
+   "Minimum": 260,
+   "Mean": 998.3,
+   "Maximum": 1418
+ },
+ {
+   "Time": "3:00",
+   "Minimum": 262,
+   "Mean": 567.2,
+   "Maximum": 739
+ },
+ {
+   "Time": "4:00",
+   "Minimum": 465,
+   "Mean": 616.1,
+   "Maximum": 876
+ },
+ {
+   "Time": "5:00",
+   "Minimum": 1255,
+   "Mean": 1484.3,
+   "Maximum": 1709
+ },
+ {
+   "Time": "6:00",
+   "Minimum": 1668,
+   "Mean": 2444.5,
+   "Maximum": 2993
+ },
+ {
+   "Time": "7:00",
+   "Minimum": 2344,
+   "Mean": 3400.8,
+   "Maximum": 4366
+ },
+ {
+   "Time": "8:00",
+   "Minimum": 2859,
+   "Mean": 4268.8,
+   "Maximum": 5775
+ },
+ {
+   "Time": "9:00",
+   "Minimum": 3766,
+   "Mean": 5008.3,
+   "Maximum": 6758
+ },
+ {
+   "Time": "10:00",
+   "Minimum": 4230,
+   "Mean": 5431.2,
+   "Maximum": 6236
+ },
+ {
+   "Time": "11:00",
+   "Minimum": 4456,
+   "Mean": 5683.4,
+   "Maximum": 6715
+ },
+ {
+   "Time": "12:00",
+   "Minimum": 3782,
+   "Mean": 5944.4,
+   "Maximum": 6872
+ },
+ {
+   "Time": "13:00",
+   "Minimum": 4863,
+   "Mean": 6062.8,
+   "Maximum": 6946
+ },
+ {
+   "Time": "14:00",
+   "Minimum": 4968,
+   "Mean": 5972.7,
+   "Maximum": 6667
+ },
+ {
+   "Time": "15:00",
+   "Minimum": 4877,
+   "Mean": 5813.9,
+   "Maximum": 6742
+ },
+ {
+   "Time": "16:00",
+   "Minimum": 4637,
+   "Mean": 5577.4,
+   "Maximum": 6251
+ },
+ {
+   "Time": "17:00",
+   "Minimum": 4071,
+   "Mean": 5185.8,
+   "Maximum": 5872
+ },
+ {
+   "Time": "18:00",
+   "Minimum": 3752,
+   "Mean": 4597.6,
+   "Maximum": 5631
+ },
+ {
+   "Time": "19:00",
+   "Minimum": 3138,
+   "Mean": 4022.5,
+   "Maximum": 5554
+ },
+ {
+   "Time": "20:00",
+   "Minimum": 2992,
+   "Mean": 3791.7,
+   "Maximum": 5236
+ },
+ {
+   "Time": "21:00",
+   "Minimum": 2319,
+   "Mean": 3861.4,
+   "Maximum": 5559
+ },
+ {
+   "Time": "22:00",
+   "Minimum": 2654,
+   "Mean": 3922.3,
+   "Maximum": 5583
+ },
+ {
+   "Time": "23:00",
+   "Minimum": 1943,
+   "Mean": 2837.7,
+   "Maximum": 5035
+ }
+]

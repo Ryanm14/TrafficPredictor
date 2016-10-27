@@ -1,0 +1,44 @@
+[
+ {
+   "Day": "Sun",
+   "Minimum": 74335,
+   "Mean": 80515.5,
+   "Maximum": 87463
+ },
+ {
+   "Day": "Mon",
+   "Minimum": 90328,
+   "Mean": 94117,
+   "Maximum": 96780
+ },
+ {
+   "Day": "Tue",
+   "Minimum": 91722,
+   "Mean": 95354,
+   "Maximum": 98027
+ },
+ {
+   "Day": "Wed",
+   "Minimum": 95152,
+   "Mean": 97437.75,
+   "Maximum": 98542
+ },
+ {
+   "Day": "Thu",
+   "Minimum": 99556,
+   "Mean": 100963.4,
+   "Maximum": 102213
+ },
+ {
+   "Day": "Fri",
+   "Minimum": 101505,
+   "Mean": 104288.4,
+   "Maximum": 106812
+ },
+ {
+   "Day": "Sat",
+   "Minimum": 79763,
+   "Mean": 88960.6,
+   "Maximum": 92178
+ }
+]
