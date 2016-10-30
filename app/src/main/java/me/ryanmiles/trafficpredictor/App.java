@@ -103,3 +103,5 @@ public class App extends Application {
         return json;
     }
 }
+
+//USE HIGH AND LOW FOR DELAY FOR WHOLE ROUTE FOR HOUR / DAY OR DAYY OF WEEK AND RUN TESTS WITH THOSES
