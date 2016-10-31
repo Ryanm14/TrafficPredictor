@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import io.paperdb.Paper;
 import me.ryanmiles.trafficpredictor.model.LearnExtra;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
@@ -25,14 +26,18 @@ import me.ryanmiles.trafficpredictor.model.TimeArg;
 public class App extends Application {
 
     private static final String TAG = "App";
-    ArrayList<Station> stations = new ArrayList<>();
     StationList stationList;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Paper.init(this);
         stationList = StationList.get(this);
-        AllStations();
+        if (SaveData.loadStations() == null) {
+            AllStations();
+        } else {
+            stationList.setStationList(SaveData.loadStations());
+        }
         //Speed
         //TimeArg timeArgSat = new TimeArg(loadJSONFromAsset("1-1-2015--12-31-2015TimeAggSat.json"));
         //DayArg dayArg = new DayArg(loadJSONFromAsset("10-1-2015--10-31-2015DayAgg.json"));
@@ -120,8 +125,7 @@ public class App extends Application {
         }catch (JSONException e){
             e.printStackTrace();
         }
-        stations = stationList.getStations();
-        Log.d(TAG, "AllStations: ");
+        SaveData.saveStations(stationList.getStations());
     }
 
     public String loadJSONFromAsset(String jsonfile) {

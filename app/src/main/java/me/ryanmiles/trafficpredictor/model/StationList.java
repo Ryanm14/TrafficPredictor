@@ -30,6 +30,10 @@ public class StationList {
         stations.add(station);
     }
 
+    public void setStationList(ArrayList<Station> stations) {
+        this.stations = stations;
+    }
+
     public ArrayList<Station> getStations() {
         return stations;
 
