@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import me.ryanmiles.trafficpredictor.model.LearnExtra;
 import me.ryanmiles.trafficpredictor.model.Station;
+import me.ryanmiles.trafficpredictor.model.StationList;
 import me.ryanmiles.trafficpredictor.model.TimeArg;
 
 
@@ -25,10 +26,12 @@ public class App extends Application {
 
     private static final String TAG = "App";
     ArrayList<Station> stations = new ArrayList<>();
+    StationList stationList;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        stationList = StationList.get(this);
         AllStations();
         //Speed
         //TimeArg timeArgSat = new TimeArg(loadJSONFromAsset("1-1-2015--12-31-2015TimeAggSat.json"));
@@ -109,7 +112,7 @@ public class App extends Application {
                     station.setSensorType(jObj.getString("Sensor Type"));
                     station.setHOV(jObj.getString("HOV"));
                     station.setMS_ID(jObj.getString("MS ID"));
-                    stations.add(station);
+                    stationList.addStation(station);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -117,6 +120,7 @@ public class App extends Application {
         }catch (JSONException e){
             e.printStackTrace();
         }
+        stations = stationList.getStations();
         Log.d(TAG, "AllStations: ");
     }
 
