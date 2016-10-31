@@ -30,7 +30,6 @@ public class Point {
     public void setTimeAvgSpeeds(ArrayList<Double> timeAvgSpeeds) {
         TimeAvgSpeeds = timeAvgSpeeds;
     }
-
     @Override
     public String toString() {
         return "Point{" +
