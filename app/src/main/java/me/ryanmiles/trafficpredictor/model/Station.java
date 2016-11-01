@@ -1,5 +1,7 @@
 package me.ryanmiles.trafficpredictor.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ryan Miles on 10/31/2016.
  */
@@ -19,6 +21,7 @@ public class Station {
     private String sensorType;
     private boolean HOV;
     private String MS_ID;
+    private ArrayList<Month> mMonths;
 
     public Station() {
         fwy = "";
@@ -35,6 +38,7 @@ public class Station {
         sensorType = "";
         HOV = false;
         MS_ID = "";
+        mMonths = getDefaultValues();
     }
 
     public String getFwy() {
@@ -137,16 +141,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(boolean HOV) {
-        this.HOV = HOV;
+    public void setHOV(String HOV) {
+        this.HOV = !HOV.equals("No");
     }
 
-    public void setHOV(String HOV) {
-        if(HOV.equals("No")){
-            this.HOV = false;
-        }else{
-            this.HOV = true;
-        }
+    public void setHOV(boolean HOV) {
+        this.HOV = HOV;
     }
 
     public String getMS_ID() {
@@ -161,10 +161,11 @@ public class Station {
     public String toString() {
         return "Station{" +
                 "fwy='" + fwy + '\'' +
-                ", district='" + district + '\'' +
+                ", district=" + district +
                 ", county='" + county + '\'' +
+                ", city='" + city + '\'' +
                 ", CA_PM='" + CA_PM + '\'' +
-                ", Abs_PM='" + Abs_PM + '\'' +
+                ", Abs_PM=" + Abs_PM +
                 ", length=" + length +
                 ", ID=" + ID +
                 ", name='" + name + '\'' +
@@ -172,7 +173,33 @@ public class Station {
                 ", type='" + type + '\'' +
                 ", sensorType='" + sensorType + '\'' +
                 ", HOV=" + HOV +
-                ", MS_ID=" + MS_ID +
+                ", MS_ID='" + MS_ID + '\'' +
+                ", mMonths=" + mMonths +
                 '}';
+    }
+
+    private ArrayList<Month> getDefaultValues() {
+        ArrayList<Month> defaultMonths = new ArrayList<>();
+        defaultMonths.add(new Month("January"));
+        defaultMonths.add(new Month("February"));
+        defaultMonths.add(new Month("March"));
+        defaultMonths.add(new Month("April"));
+        defaultMonths.add(new Month("May"));
+        defaultMonths.add(new Month("June"));
+        defaultMonths.add(new Month("July"));
+        defaultMonths.add(new Month("August"));
+        defaultMonths.add(new Month("September"));
+        defaultMonths.add(new Month("October"));
+        defaultMonths.add(new Month("November"));
+        defaultMonths.add(new Month("December"));
+        return defaultMonths;
+    }
+
+    public void setDataMin(int month, int dayOfTheWeek, int time, double delay) {
+        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDataDelayMin(delay);
+    }
+
+    public void setDataMax(int month, int dayOfTheWeek, int time, double delay) {
+        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDataDelayMax(delay);
     }
 }

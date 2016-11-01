@@ -35,7 +35,68 @@ public class App extends Application {
             stationList.setStationList(SaveData.loadStations());
             Log.d(TAG, "Loaded Stations from memory");
         }
+        loadMinDelayDataToStations();
+        loadMaxDelayDataToStations();
+    }
 
+    private void loadMinDelayDataToStations() {
+        String json = loadJSONFromAsset("SundayMaxDelayDataI5-101-331.json");
+        try {
+            JSONArray items = new JSONArray(json);
+            for (int i = 0; i < items.length(); i++) {
+                JSONObject jObj = null;
+                try {
+                    jObj = items.getJSONObject(i);
+                    Station station = stationList.getStation(jObj.getInt("VDS"));
+                    for (int month = 0; month < 3; month++) {
+                        for (int time = 0; time < 24; time++) {
+                            double value = jObj.getDouble(String.valueOf(time));
+                            try {
+                                station.setDataMax(month, 0, time, value);
+                            } catch (NullPointerException error) {
+                                error.printStackTrace();
+                            }
+                            //                           Log.d(TAG,"Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Log.d(TAG, "Test");
+    }
+
+    private void loadMaxDelayDataToStations() {
+        String json = loadJSONFromAsset("SundayMinDelayDataI5-101-331.json");
+        try {
+            JSONArray items = new JSONArray(json);
+            for (int i = 0; i < items.length(); i++) {
+                JSONObject jObj = null;
+                try {
+                    jObj = items.getJSONObject(i);
+                    Station station = stationList.getStation(jObj.getInt("VDS"));
+                    for (int month = 0; month < 3; month++) {
+                        for (int time = 0; time < 24; time++) {
+                            double value = jObj.getDouble(String.valueOf(time));
+                            try {
+                                station.setDataMin(month, 0, time, value);
+                            } catch (NullPointerException error) {
+                                error.printStackTrace();
+                            }
+                            //                           Log.d(TAG,"Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Log.d(TAG, "Test");
     }
 
     private void AllStations() {
