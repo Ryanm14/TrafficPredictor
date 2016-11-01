@@ -1,6 +1,7 @@
 package me.ryanmiles.trafficpredictor;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,7 +20,6 @@ import me.ryanmiles.trafficpredictor.model.StationList;
  */
 
 public class App extends Application {
-
     private static final String TAG = "App";
     StationList stationList;
 
@@ -30,8 +30,10 @@ public class App extends Application {
         stationList = StationList.get(this);
         if (SaveData.loadStations() == null) {
             AllStations();
+            Log.d(TAG, "Loaded Stations from json file");
         } else {
             stationList.setStationList(SaveData.loadStations());
+            Log.d(TAG, "Loaded Stations from memory");
         }
 
     }
@@ -51,7 +53,9 @@ public class App extends Application {
                     station.setCity(jObj.getString("City"));
                     station.setCA_PM(jObj.getString("CA PM"));
                     station.setAbs_PM(jObj.getDouble("Abs PM"));
-                    station.setLength(jObj.getDouble("Length"));
+                    if (!jObj.isNull("Length")) {
+                        station.setLength(jObj.getDouble("Length"));
+                    }
                     station.setID(jObj.getInt("ID"));
                     station.setName(jObj.getString("Name"));
                     station.setLanes(jObj.getInt("Lanes"));
@@ -64,7 +68,7 @@ public class App extends Application {
                     e.printStackTrace();
                 }
             }
-        }catch (JSONException e){
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         SaveData.saveStations(stationList.getStations());
@@ -73,20 +77,12 @@ public class App extends Application {
     public String loadJSONFromAsset(String jsonfile) {
         String json = null;
         try {
-
             InputStream is = getAssets().open(jsonfile);
-
             int size = is.available();
-
             byte[] buffer = new byte[size];
-
             is.read(buffer);
-
             is.close();
-
             json = new String(buffer, "UTF-8");
-
-
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;
