@@ -35,8 +35,36 @@ public class App extends Application {
             stationList.setStationList(SaveData.loadStations());
             Log.d(TAG, "Loaded Stations from memory");
         }
-        loadMinDelayDataToStations();
+        //Fix to go at saved - idk why not working
+        loadLatLongData();
+        //    loadMinDelayDataToStations();
         loadMaxDelayDataToStations();
+
+    }
+
+    public void loadLatLongData() {
+        String json = loadJSONFromAsset("Station 1-200 Lats.json");
+        Log.wtf(TAG, "loadLatLongData: " + json);
+        try {
+            JSONArray items = new JSONArray(json);
+            Log.wtf(TAG, "loadLatLongData: " + items.toString());
+            for (int i = 0; i < items.length(); i++) {
+                JSONObject jObj = null;
+                try {
+                    jObj = items.getJSONObject(i);
+                    Log.d(TAG, "loadLatLongData: " + jObj.toString());
+                    //Double check the id later
+                    Station station = stationList.getStationFromPostion(i);
+                    station.setLat(jObj.getString("lat"));
+                    station.setLng(jObj.getString("lng"));
+                    Log.d(TAG, "loadLatLongData: " + station);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadMinDelayDataToStations() {
@@ -66,7 +94,6 @@ public class App extends Application {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Log.d(TAG, "Test");
     }
 
     private void loadMaxDelayDataToStations() {
@@ -132,6 +159,7 @@ public class App extends Application {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         SaveData.saveStations(stationList.getStations());
     }
 

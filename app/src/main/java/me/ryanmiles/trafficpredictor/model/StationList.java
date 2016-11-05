@@ -48,6 +48,10 @@ public class StationList {
         return null;
     }
 
+    public Station getStationFromPostion(int i) {
+        return stations.get(i);
+    }
+
     public void updateStation(Station station) {
         int stationID = station.getID();
         stations.set(getStationPostion(stationID), station);

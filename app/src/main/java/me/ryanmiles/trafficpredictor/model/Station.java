@@ -22,6 +22,8 @@ public class Station {
     private boolean HOV;
     private String MS_ID;
     private ArrayList<Month> mMonths;
+    private String lat;
+    private String lng;
 
     public Station() {
         fwy = "";
@@ -39,6 +41,32 @@ public class Station {
         HOV = false;
         MS_ID = "";
         mMonths = getDefaultValues();
+        lat = "";
+        lng = "";
+    }
+
+    public ArrayList<Month> getmMonths() {
+        return mMonths;
+    }
+
+    public void setmMonths(ArrayList<Month> mMonths) {
+        this.mMonths = mMonths;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
     }
 
     public String getFwy() {
@@ -141,12 +169,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(String HOV) {
-        this.HOV = !HOV.equals("No");
-    }
-
     public void setHOV(boolean HOV) {
         this.HOV = HOV;
+    }
+
+    public void setHOV(String HOV) {
+        this.HOV = !HOV.equals("No");
     }
 
     public String getMS_ID() {
@@ -174,9 +202,28 @@ public class Station {
                 ", sensorType='" + sensorType + '\'' +
                 ", HOV=" + HOV +
                 ", MS_ID='" + MS_ID + '\'' +
-                ", mMonths=" + mMonths +
+                ", lat='" + lat + '\'' +
+                ", lng='" + lng + '\'' +
                 '}';
     }
+
+    public String getInfo() {
+        return "Freeway: " + fwy +
+                "\nID: " + ID +
+                "\nName: " + name +
+                "\nDistrict: " + district +
+                "\nCounty: " + county +
+                "\nCity: " + city +
+                "\nCA PM: " + CA_PM +
+                "\nAbs PM: " + Abs_PM +
+                "\nLength: " + length +
+                "\nLanes: " + lanes +
+                "\nType: " + type +
+                "\nSensor Type: " + sensorType +
+                "\nHOV: " + HOV +
+                "\nMS ID: " + MS_ID;
+    }
+
 
     private ArrayList<Month> getDefaultValues() {
         ArrayList<Month> defaultMonths = new ArrayList<>();

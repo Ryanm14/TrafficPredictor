@@ -1,11 +1,11 @@
 package me.ryanmiles.trafficpredictor;
 
-import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -18,7 +18,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.ArrayList;
+import me.ryanmiles.trafficpredictor.model.Station;
+import me.ryanmiles.trafficpredictor.model.StationList;
 
 /**
  * Created by Ryan Miles on 10/13/2016.
@@ -31,19 +32,19 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         GoogleMap.OnMapClickListener,
         GoogleMap.OnMarkerClickListener {
 
-    private Location mCurrentLocation;
-
     private final int[] MAP_TYPES = {GoogleMap.MAP_TYPE_SATELLITE,
             GoogleMap.MAP_TYPE_NORMAL,
             GoogleMap.MAP_TYPE_HYBRID,
             GoogleMap.MAP_TYPE_TERRAIN,
             GoogleMap.MAP_TYPE_NONE};
+    private StationList stationList;
     private int curMapTypeIndex = 1;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setHasOptionsMenu(true);
+        stationList = StationList.get(getContext());
         initCamera(new LatLng(32.746748, -117.191312));
     }
 
@@ -67,20 +68,24 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
 
 
                 //Marker
-                ArrayList<LatLng> latLngs = new ArrayList<>();
-                latLngs.add(new LatLng(32.746748, -117.191312));
-                latLngs.add(new LatLng(32.746784, -117.191904));
-                latLngs.add(new LatLng(32.750068, -117.196046));
-                latLngs.add(new LatLng(32.749919, -117.196234));
-                latLngs.add(new LatLng(32.743605, -117.184656));
-                latLngs.add(new LatLng(32.743425, -117.1848));
-                for (LatLng lng : latLngs) {
-                    MarkerOptions options = new MarkerOptions().position(lng);
-
-                    options.icon(BitmapDescriptorFactory.defaultMarker());
-                    googleMap.addMarker(options);
+                for (Station station : stationList.getStations()) {
+                    if (!station.getLat().equals("")) {
+                        MarkerOptions options = new MarkerOptions().position(new LatLng(Double.parseDouble(station.getLat()), Double.parseDouble(station.getLng())));
+                        options.title(station.getName() + " (" + station.getID() + ")");
+                        options.snippet("Click for more details");
+                        options.icon(BitmapDescriptorFactory.defaultMarker());
+                        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                            @Override
+                            public void onInfoWindowClick(Marker marker) {
+                                Station station1 = (Station) marker.getTag();
+                                new MaterialDialog.Builder(getActivity())
+                                        .title(station1.getName() + " (" + station1.getID() + "}")
+                                        .content(station1.getInfo()).show();
+                            }
+                        });
+                        googleMap.addMarker(options).setTag(station);
+                    }
                 }
-
             }
         });
     }
