@@ -44,7 +44,9 @@ public class App extends Application {
         StrictMode.setThreadPolicy(policy);
         loadLatLongData();
 
-        loadPathData();
+        if (stationList.getStationFromPostion(0).getJsonPath().equals("")) {
+            loadPathData();
+        }
         //    loadMinDelayDataToStations();
         loadMaxDelayDataToStations();
 
@@ -60,6 +62,7 @@ public class App extends Application {
 
             if (!sourcelat.equals("") || !sourcelong.equals("") || !destlat.equals("") || !destlong.equals("")) {
                 String url = makeURL(sourcelat, sourcelong, destlat, destlong);
+                Log.d(TAG, "loadPathData: " + url + " ID: " + stationList.getStationFromPostion(i).getID());
                 try {
                     String json2 = new connectAsyncTask(url).execute().get();
                     stationList.getStationFromPostion(i).setJsonPath(json2);
@@ -70,7 +73,7 @@ public class App extends Application {
                 }
             }
         }
-        Log.wtf(TAG, "loadPathData: " + stationList.getStationFromPostion(0).getJsonPath());
+//        SaveData.saveStations(stationList.getStations());
     }
 
     private String makeURL(String sourcelat, String sourcelog, String destlat, String destlog) {
@@ -85,7 +88,7 @@ public class App extends Application {
         urlString.append(",");
         urlString.append(destlog);
         urlString.append("&sensor=false&mode=driving&alternatives=true");
-        urlString.append("&key=AIzaSyAdczZcnTHIXiLoiauuzp-B1SWYGPkttCQ");
+        urlString.append("&key=AIzaSyB99QV5Y97Pinr6I0W0Nem1HGGw37x38DE");
         return urlString.toString();
     }
 
