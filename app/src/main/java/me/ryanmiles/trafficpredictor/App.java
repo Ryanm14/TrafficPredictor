@@ -1,6 +1,8 @@
 package me.ryanmiles.trafficpredictor;
 
 import android.app.Application;
+import android.os.AsyncTask;
+import android.os.StrictMode;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -9,6 +11,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.concurrent.ExecutionException;
 
 import io.paperdb.Paper;
 import me.ryanmiles.trafficpredictor.model.Station;
@@ -36,10 +39,54 @@ public class App extends Application {
             Log.d(TAG, "Loaded Stations from memory");
         }
         //Fix to go at saved - idk why not working
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         loadLatLongData();
+
+        loadPathData();
         //    loadMinDelayDataToStations();
         loadMaxDelayDataToStations();
 
+    }
+
+    private void loadPathData() {
+        JSONParser jParser = new JSONParser();
+        for (int i = 0; i < stationList.getStations().size() - 1; i++) {
+            String sourcelat = stationList.getStationFromPostion(i).getLat();
+            String sourcelong = stationList.getStationFromPostion(i).getLng();
+            String destlat = stationList.getStationFromPostion(i + 1).getLat();
+            String destlong = stationList.getStationFromPostion(i + 1).getLng();
+
+            if (!sourcelat.equals("") || !sourcelong.equals("") || !destlat.equals("") || !destlong.equals("")) {
+                String url = makeURL(sourcelat, sourcelong, destlat, destlong);
+                try {
+                    String json2 = new connectAsyncTask(url).execute().get();
+                    stationList.getStationFromPostion(i).setJsonPath(json2);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        Log.wtf(TAG, "loadPathData: " + stationList.getStationFromPostion(0).getJsonPath());
+    }
+
+    private String makeURL(String sourcelat, String sourcelog, String destlat, String destlog) {
+        StringBuilder urlString = new StringBuilder();
+        urlString.append("https://maps.googleapis.com/maps/api/directions/json");
+        urlString.append("?origin=");// from
+        urlString.append(sourcelat);
+        urlString.append(",");
+        urlString.append(sourcelog);
+        urlString.append("&destination=");// to
+        urlString.append(destlat);
+        urlString.append(",");
+        urlString.append(destlog);
+        urlString.append("&sensor=false&mode=driving&alternatives=true");
+        urlString.append("&key=AIzaSyAdczZcnTHIXiLoiauuzp-B1SWYGPkttCQ");
+        return urlString.toString();
     }
 
     public void loadLatLongData() {
@@ -97,7 +144,7 @@ public class App extends Application {
     }
 
     private void loadMaxDelayDataToStations() {
-        String json = loadJSONFromAsset("SundayMinDelayDataI5-101-331.json");
+        String json = loadJSONFromAsset("SundayMaxDelayDataI5-101-331.json");
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
@@ -109,11 +156,11 @@ public class App extends Application {
                         for (int time = 0; time < 24; time++) {
                             double value = jObj.getDouble(String.valueOf(time));
                             try {
-                                station.setDataMin(month, 0, time, value);
+                                station.setDataMax(month, 0, time, value);
                             } catch (NullPointerException error) {
                                 error.printStackTrace();
                             }
-                            //                           Log.d(TAG,"Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
+                            Log.d(TAG, "Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
                         }
                     }
                 } catch (JSONException e) {
@@ -178,6 +225,23 @@ public class App extends Application {
         }
         return json;
     }
+
+    private class connectAsyncTask extends AsyncTask<Void, Void, String> {
+        String url;
+
+        connectAsyncTask(String urlPass) {
+            url = urlPass;
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            JSONParser jParser = new JSONParser();
+            String json = jParser.getJSONFromUrl(url);
+            return json;
+        }
+
+    }
 }
+
 
 //USE HIGH AND LOW FOR DELAY FOR WHOLE ROUTE FOR HOUR / DAY OR DAYY OF WEEK AND RUN TESTS WITH THOSES

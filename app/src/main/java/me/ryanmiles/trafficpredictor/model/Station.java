@@ -24,6 +24,7 @@ public class Station {
     private ArrayList<Month> mMonths;
     private String lat;
     private String lng;
+    private String jsonPath;
 
     public Station() {
         fwy = "";
@@ -43,6 +44,15 @@ public class Station {
         mMonths = getDefaultValues();
         lat = "";
         lng = "";
+        jsonPath = "";
+    }
+
+    public String getJsonPath() {
+        return jsonPath;
+    }
+
+    public void setJsonPath(String jsonPath) {
+        this.jsonPath = jsonPath;
     }
 
     public ArrayList<Month> getmMonths() {
@@ -169,12 +179,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(boolean HOV) {
-        this.HOV = HOV;
-    }
-
     public void setHOV(String HOV) {
         this.HOV = !HOV.equals("No");
+    }
+
+    public void setHOV(boolean HOV) {
+        this.HOV = HOV;
     }
 
     public String getMS_ID() {
