@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -21,15 +22,17 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
-import java.util.List;
 
+import me.ryanmiles.trafficpredictor.event.UpdateDoftwEvent;
+import me.ryanmiles.trafficpredictor.event.UpdateMonthEvent;
+import me.ryanmiles.trafficpredictor.event.UpdateTimesEvent;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
+
 
 /**
  * Created by Ryan Miles on 10/13/2016.
@@ -42,6 +45,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         GoogleMap.OnMapClickListener,
         GoogleMap.OnMarkerClickListener {
 
+    private static final String TAG = MapFragment.class.getCanonicalName();
     private final int[] MAP_TYPES = {GoogleMap.MAP_TYPE_SATELLITE,
             GoogleMap.MAP_TYPE_NORMAL,
             GoogleMap.MAP_TYPE_HYBRID,
@@ -50,12 +54,17 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     private StationList stationList;
     private int curMapTypeIndex = 1;
     private GoogleMap googleMap;
+    private int mMonthPos = 0;
+    private int mDoftwPos = 0;
+    private int mTimePos = 0;
+    private ArrayList<Polyline> mPolylines;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setHasOptionsMenu(true);
         stationList = StationList.get(getContext());
+        mPolylines = new ArrayList<>();
         initCamera(new LatLng(32.746748, -117.191312));
     }
 
@@ -95,89 +104,47 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                                         .content(station1.getInfo()).show();
                             }
                         });
-
-                        drawPath(station.getJsonPath(), getColor(station.getmMonths().get(0).getDays().get(0).getHours().get(12).getDataDelayMax()));
                         googleMap.addMarker(options).setTag(station);
                     }
                 }
+                connectLines();
             }
         });
     }
 
+    private void connectLines() {
+        Log.d(TAG, "connectLines: ");
+
+        for (Polyline polyline : mPolylines) {
+            polyline.remove();
+        }
+        mPolylines.clear();
+
+        for (Station station : stationList.getStations()) {
+            if (station.getDirections() != null) {
+                String color = getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDataDelayMax());
+                Polyline polyline = googleMap.addPolyline(new PolylineOptions()
+                        .addAll(station.getDirections())
+                        .width(12)
+                        .color(Color.parseColor(color))
+                        .geodesic(true)
+                );
+                mPolylines.add(polyline);
+            }
+        }
+
+    }
+
     private String getColor(double dataDelayMax) {
-        if (dataDelayMax <= 5) {
+        if (dataDelayMax <= 3) {
             return "#98fb98";
-        } else if (dataDelayMax <= 40) {
+        } else if (dataDelayMax <= 20) {
             return "#ffff00";
         } else {
             return "#ff0000";
         }
     }
 
-    public void drawPath(String result, String color) {
-
-        try {
-            //Tranform the string into a json object
-            final JSONObject json = new JSONObject(result);
-            JSONArray routeArray = json.getJSONArray("routes");
-            JSONObject routes = routeArray.getJSONObject(0);
-            JSONObject overviewPolylines = routes.getJSONObject("overview_polyline");
-            String encodedString = overviewPolylines.getString("points");
-            List<LatLng> list = decodePoly(encodedString);
-            Polyline line = googleMap.addPolyline(new PolylineOptions()
-                    .addAll(list)
-                    .width(12)
-                    .color(Color.parseColor(color))//Google maps blue color
-                    .geodesic(true)
-            );
-           /*
-           for(int z = 0; z<list.size()-1;z++){
-                LatLng src= list.get(z);
-                LatLng dest= list.get(z+1);
-                Polyline line = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(src.latitude, src.longitude), new LatLng(dest.latitude,   dest.longitude))
-                .width(2)
-                .color(Color.BLUE).geodesic(true));
-            }
-           */
-        } catch (JSONException e) {
-
-        }
-    }
-
-    private List<LatLng> decodePoly(String encoded) {
-
-        List<LatLng> poly = new ArrayList<LatLng>();
-        int index = 0, len = encoded.length();
-        int lat = 0, lng = 0;
-
-        while (index < len) {
-            int b, shift = 0, result = 0;
-            do {
-                b = encoded.charAt(index++) - 63;
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-            } while (b >= 0x20);
-            int dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-            lat += dlat;
-
-            shift = 0;
-            result = 0;
-            do {
-                b = encoded.charAt(index++) - 63;
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-            } while (b >= 0x20);
-            int dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-            lng += dlng;
-
-            LatLng p = new LatLng((((double) lat / 1E5)),
-                    (((double) lng / 1E5)));
-            poly.add(p);
-        }
-
-        return poly;
-    }
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
@@ -214,5 +181,36 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         return false;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onMessageEvent(UpdateMonthEvent event) {
+        Log.d(TAG, "onMessageEvent: UpdateMonth");
+        mMonthPos = event.getPos();
+        connectLines();
+    }
+
+    @Subscribe
+    public void onMessageEvent(UpdateDoftwEvent event) {
+        Log.d(TAG, "onMessageEvent: UpdateDoftw");
+        mDoftwPos = event.getPos();
+        connectLines();
+    }
+
+    @Subscribe
+    public void onMessageEvent(UpdateTimesEvent event) {
+        Log.d(TAG, "onMessageEvent: UpdateTime");
+        mTimePos = event.getPos();
+        connectLines();
+    }
 }

@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="me.ryanmiles.trafficpredictor.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="me.ryanmiles.trafficpredictor.MainActivity">>
 
     <fragment
         android:id="@+id/map"
         android:name="me.ryanmiles.trafficpredictor.MapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="85"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/wheel_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            aigestudio:wheel_atmospheric="true"
+            aigestudio:wheel_curved="true"
+            aigestudio:wheel_cyclic="true"
+            aigestudio:wheel_item_text_color="#A7A7DB"
+            aigestudio:wheel_item_text_size="24sp"
+            aigestudio:wheel_selected_item_text_color="#536D8A"/>
+
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/wheel_dotw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            aigestudio:wheel_atmospheric="true"
+            aigestudio:wheel_curved="true"
+            aigestudio:wheel_cyclic="true"
+            aigestudio:wheel_item_text_color="#A7A7DB"
+            aigestudio:wheel_item_text_size="24sp"
+            aigestudio:wheel_selected_item_text_color="#536D8A"/>
+
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/wheel_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            aigestudio:wheel_atmospheric="true"
+            aigestudio:wheel_curved="true"
+            aigestudio:wheel_cyclic="true"
+            aigestudio:wheel_item_text_color="#A7A7DB"
+            aigestudio:wheel_item_text_size="24sp"
+            aigestudio:wheel_selected_item_text_color="#536D8A"
+            />
+    </LinearLayout>
+</LinearLayout>

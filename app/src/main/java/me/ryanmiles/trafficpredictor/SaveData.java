@@ -18,13 +18,19 @@ public class SaveData {
     public static void saveData() {
     }
 
-    public static void saveStations(ArrayList<Station> stations) {
-        Paper.book().write(STATIONS_KEY, stations);
-        Log.d(TAG, "Saving Stations");
+    public static void saveStations(final ArrayList<Station> stations) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.i(TAG, "Saving Stations");
+                Paper.book().write(STATIONS_KEY, stations);
+                Log.i(TAG, "Saved Stations");
+            }
+        }).start();
     }
 
     public static ArrayList<Station> loadStations() {
-        Log.d(TAG, "Loading Stations");
+        Log.i(TAG, "Loading Stations");
         return Paper.book().read(STATIONS_KEY, null);
     }
 }

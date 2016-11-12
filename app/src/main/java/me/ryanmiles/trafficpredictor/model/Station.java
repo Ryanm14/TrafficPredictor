@@ -1,6 +1,13 @@
 package me.ryanmiles.trafficpredictor.model;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ryan Miles on 10/31/2016.
@@ -21,10 +28,10 @@ public class Station {
     private String sensorType;
     private boolean HOV;
     private String MS_ID;
-    private ArrayList<Month> mMonths;
+    private transient ArrayList<Month> mMonths;
     private String lat;
     private String lng;
-    private String jsonPath;
+    private List<LatLng> directions;
 
     public Station() {
         fwy = "";
@@ -41,18 +48,64 @@ public class Station {
         sensorType = "";
         HOV = false;
         MS_ID = "";
-        mMonths = getDefaultValues();
         lat = "";
         lng = "";
-        jsonPath = "";
+        directions = null;
     }
 
-    public String getJsonPath() {
-        return jsonPath;
+    public void setDirections(List<LatLng> directions) {
+        this.directions = directions;
     }
 
-    public void setJsonPath(String jsonPath) {
-        this.jsonPath = jsonPath;
+    public List<LatLng> getDirections() {
+        return directions;
+    }
+
+    public void setDirections(String result) {
+        try {
+            JSONObject json = new JSONObject(result);
+            JSONArray routeArray = json.getJSONArray("routes");
+            JSONObject routes = routeArray.getJSONObject(0);
+            JSONObject overviewPolylines = routes.getJSONObject("overview_polyline");
+            String encodedString = overviewPolylines.getString("points");
+            directions = decodePoly(encodedString);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<LatLng> decodePoly(String encoded) {
+
+        List<LatLng> poly = new ArrayList<LatLng>();
+        int index = 0, len = encoded.length();
+        int lat = 0, lng = 0;
+
+        while (index < len) {
+            int b, shift = 0, result = 0;
+            do {
+                b = encoded.charAt(index++) - 63;
+                result |= (b & 0x1f) << shift;
+                shift += 5;
+            } while (b >= 0x20);
+            int dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+            lat += dlat;
+
+            shift = 0;
+            result = 0;
+            do {
+                b = encoded.charAt(index++) - 63;
+                result |= (b & 0x1f) << shift;
+                shift += 5;
+            } while (b >= 0x20);
+            int dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+            lng += dlng;
+
+            LatLng p = new LatLng((((double) lat / 1E5)),
+                    (((double) lng / 1E5)));
+            poly.add(p);
+        }
+
+        return poly;
     }
 
     public ArrayList<Month> getmMonths() {
@@ -179,12 +232,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(String HOV) {
-        this.HOV = !HOV.equals("No");
-    }
-
     public void setHOV(boolean HOV) {
         this.HOV = HOV;
+    }
+
+    public void setHOV(String HOV) {
+        this.HOV = !HOV.equals("No");
     }
 
     public String getMS_ID() {
@@ -235,7 +288,7 @@ public class Station {
     }
 
 
-    private ArrayList<Month> getDefaultValues() {
+    public void setDefaultMonthValues() {
         ArrayList<Month> defaultMonths = new ArrayList<>();
         defaultMonths.add(new Month("January"));
         defaultMonths.add(new Month("February"));
@@ -249,7 +302,7 @@ public class Station {
         defaultMonths.add(new Month("October"));
         defaultMonths.add(new Month("November"));
         defaultMonths.add(new Month("December"));
-        return defaultMonths;
+        mMonths = defaultMonths;
     }
 
     public void setDataMin(int month, int dayOfTheWeek, int time, double delay) {

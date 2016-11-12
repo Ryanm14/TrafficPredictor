@@ -2,7 +2,6 @@ package me.ryanmiles.trafficpredictor;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.os.StrictMode;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -33,27 +32,22 @@ public class App extends Application {
         stationList = StationList.get(this);
         if (SaveData.loadStations() == null) {
             AllStations();
+            loadLatLongData();
+            loadPathData();
+            SaveData.saveStations(stationList.getStations());
             Log.d(TAG, "Loaded Stations from json file");
         } else {
             stationList.setStationList(SaveData.loadStations());
+            for (Station station : stationList.getStations()) {
+                station.setDefaultMonthValues();
+            }
+            loadMaxDelayDataToStations();
             Log.d(TAG, "Loaded Stations from memory");
         }
-        //Fix to go at saved - idk why not working
-
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-        loadLatLongData();
-
-        if (stationList.getStationFromPostion(0).getJsonPath().equals("")) {
-            loadPathData();
-        }
-        //    loadMinDelayDataToStations();
-        loadMaxDelayDataToStations();
 
     }
 
     private void loadPathData() {
-        JSONParser jParser = new JSONParser();
         for (int i = 0; i < stationList.getStations().size() - 1; i++) {
             String sourcelat = stationList.getStationFromPostion(i).getLat();
             String sourcelong = stationList.getStationFromPostion(i).getLng();
@@ -62,18 +56,15 @@ public class App extends Application {
 
             if (!sourcelat.equals("") || !sourcelong.equals("") || !destlat.equals("") || !destlong.equals("")) {
                 String url = makeURL(sourcelat, sourcelong, destlat, destlong);
-                Log.d(TAG, "loadPathData: " + url + " ID: " + stationList.getStationFromPostion(i).getID());
+                Log.v(TAG, "loadPathData: " + url + " ID: " + stationList.getStationFromPostion(i).getID());
                 try {
                     String json2 = new connectAsyncTask(url).execute().get();
-                    stationList.getStationFromPostion(i).setJsonPath(json2);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
+                    stationList.getStationFromPostion(i).setDirections(json2);
+                } catch (InterruptedException | ExecutionException e) {
                     e.printStackTrace();
                 }
             }
         }
-//        SaveData.saveStations(stationList.getStations());
     }
 
     private String makeURL(String sourcelat, String sourcelog, String destlat, String destlog) {
@@ -94,20 +85,16 @@ public class App extends Application {
 
     public void loadLatLongData() {
         String json = loadJSONFromAsset("Station 1-200 Lats.json");
-        Log.wtf(TAG, "loadLatLongData: " + json);
         try {
             JSONArray items = new JSONArray(json);
-            Log.wtf(TAG, "loadLatLongData: " + items.toString());
             for (int i = 0; i < items.length(); i++) {
                 JSONObject jObj = null;
                 try {
                     jObj = items.getJSONObject(i);
-                    Log.d(TAG, "loadLatLongData: " + jObj.toString());
                     //Double check the id later
                     Station station = stationList.getStationFromPostion(i);
                     station.setLat(jObj.getString("lat"));
                     station.setLng(jObj.getString("lng"));
-                    Log.d(TAG, "loadLatLongData: " + station);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -163,7 +150,7 @@ public class App extends Application {
                             } catch (NullPointerException error) {
                                 error.printStackTrace();
                             }
-                            Log.d(TAG, "Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
+                            //  Log.d(TAG, "Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
                         }
                     }
                 } catch (JSONException e) {
@@ -173,7 +160,6 @@ public class App extends Application {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Log.d(TAG, "Test");
     }
 
     private void AllStations() {
@@ -210,7 +196,6 @@ public class App extends Application {
             e.printStackTrace();
         }
 
-        SaveData.saveStations(stationList.getStations());
     }
 
     public String loadJSONFromAsset(String jsonfile) {
