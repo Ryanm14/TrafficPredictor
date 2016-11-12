@@ -41,10 +41,70 @@ public class App extends Application {
             for (Station station : stationList.getStations()) {
                 station.setDefaultMonthValues();
             }
-            loadMaxDelayDataToStations();
+
+
+            for (int i = 0; i < 1; i++) {
+                //month
+                for (int j = 0; j < 7; j++) {
+                    //DOFTW
+                    String load = "I5N_" + getMonth(i) + "_" + getDay(j) + ".json";
+                    loadDelayDataToStations(load, i, j);
+                }
+            }
+
             Log.d(TAG, "Loaded Stations from memory");
         }
 
+    }
+
+    private String getDay(int j) {
+        switch (j) {
+            case 0:
+                return "Sunday";
+            case 1:
+                return "Monday";
+            case 2:
+                return "Tuesday";
+            case 3:
+                return "Wednesday";
+            case 4:
+                return "Thursday";
+            case 5:
+                return "Friday";
+            case 6:
+                return "Saturday";
+        }
+        return "wow";
+    }
+
+    private String getMonth(int i) {
+        switch (i) {
+            case 0:
+                return "January";
+            case 1:
+                return "February";
+            case 2:
+                return "March";
+            case 3:
+                return "April";
+            case 4:
+                return "May";
+            case 5:
+                return "June";
+            case 6:
+                return "July";
+            case 7:
+                return "August";
+            case 8:
+                return "September";
+            case 9:
+                return "October";
+            case 10:
+                return "November";
+            case 11:
+                return "December";
+        }
+        return "wow";
     }
 
     private void loadPathData() {
@@ -104,8 +164,8 @@ public class App extends Application {
         }
     }
 
-    private void loadMinDelayDataToStations() {
-        String json = loadJSONFromAsset("SundayMaxDelayDataI5-101-331.json");
+    private void loadDelayDataToStations(String jsonFileName, int month, int doftw) {
+        String json = loadJSONFromAsset(jsonFileName);
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
@@ -113,45 +173,14 @@ public class App extends Application {
                 try {
                     jObj = items.getJSONObject(i);
                     Station station = stationList.getStation(jObj.getInt("VDS"));
-                    for (int month = 0; month < 3; month++) {
                         for (int time = 0; time < 24; time++) {
                             double value = jObj.getDouble(String.valueOf(time));
                             try {
-                                station.setDataMax(month, 0, time, value);
-                            } catch (NullPointerException error) {
-                                error.printStackTrace();
-                            }
-                            //                           Log.d(TAG,"Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
-                        }
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void loadMaxDelayDataToStations() {
-        String json = loadJSONFromAsset("SundayMaxDelayDataI5-101-331.json");
-        try {
-            JSONArray items = new JSONArray(json);
-            for (int i = 0; i < items.length(); i++) {
-                JSONObject jObj = null;
-                try {
-                    jObj = items.getJSONObject(i);
-                    Station station = stationList.getStation(jObj.getInt("VDS"));
-                    for (int month = 0; month < 3; month++) {
-                        for (int time = 0; time < 24; time++) {
-                            double value = jObj.getDouble(String.valueOf(time));
-                            try {
-                                station.setDataMax(month, 0, time, value);
+                                station.setDataMax(month, doftw, time, value);
                             } catch (NullPointerException error) {
                                 error.printStackTrace();
                             }
                             //  Log.d(TAG, "Station: " + station + "Month: " + month + " Sunday: 0 " + "Time: " + time + " Value: " + value);
-                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

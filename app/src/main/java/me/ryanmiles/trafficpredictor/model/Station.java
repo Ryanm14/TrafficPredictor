@@ -232,12 +232,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(boolean HOV) {
-        this.HOV = HOV;
-    }
-
     public void setHOV(String HOV) {
         this.HOV = !HOV.equals("No");
+    }
+
+    public void setHOV(boolean HOV) {
+        this.HOV = HOV;
     }
 
     public String getMS_ID() {
@@ -306,10 +306,10 @@ public class Station {
     }
 
     public void setDataMin(int month, int dayOfTheWeek, int time, double delay) {
-        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDataDelayMin(delay);
+        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDelay(delay);
     }
 
     public void setDataMax(int month, int dayOfTheWeek, int time, double delay) {
-        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDataDelayMax(delay);
+        mMonths.get(month).getDays().get(dayOfTheWeek).getHours().get(time).setDelay(delay);
     }
 }

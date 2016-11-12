@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -51,6 +54,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
             GoogleMap.MAP_TYPE_HYBRID,
             GoogleMap.MAP_TYPE_TERRAIN,
             GoogleMap.MAP_TYPE_NONE};
+    boolean visible = true;
     private StationList stationList;
     private int curMapTypeIndex = 1;
     private GoogleMap googleMap;
@@ -58,6 +62,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     private int mDoftwPos = 0;
     private int mTimePos = 0;
     private ArrayList<Polyline> mPolylines;
+    private ArrayList<Marker> mMarkers;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -65,6 +70,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         setHasOptionsMenu(true);
         stationList = StationList.get(getContext());
         mPolylines = new ArrayList<>();
+        mMarkers = new ArrayList<>();
         initCamera(new LatLng(32.746748, -117.191312));
     }
 
@@ -104,7 +110,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                                         .content(station1.getInfo()).show();
                             }
                         });
-                        googleMap.addMarker(options).setTag(station);
+                        mMarkers.add(googleMap.addMarker(options));
                     }
                 }
                 connectLines();
@@ -122,7 +128,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
 
         for (Station station : stationList.getStations()) {
             if (station.getDirections() != null) {
-                String color = getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDataDelayMax());
+                String color = getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
                 Polyline polyline = googleMap.addPolyline(new PolylineOptions()
                         .addAll(station.getDirections())
                         .width(12)
@@ -135,6 +141,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
 
     }
 
+    //TODO Calcaulte Delay categories
     private String getColor(double dataDelayMax) {
         if (dataDelayMax <= 3) {
             return "#98fb98";
@@ -182,6 +189,12 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     }
 
     @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
         EventBus.getDefault().register(this);
@@ -213,4 +226,20 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         mTimePos = event.getPos();
         connectLines();
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.toggleMarkers:
+                visible = !visible;
+                for (Marker marker : mMarkers) {
+                    marker.setVisible(visible);
+                }
+                break;
+
+        }
+        return true;
+
+    }
+
 }
