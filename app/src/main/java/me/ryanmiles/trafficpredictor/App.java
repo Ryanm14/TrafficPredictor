@@ -144,15 +144,14 @@ public class App extends Application {
     }
 
     public void loadLatLongData() {
-        String json = loadJSONFromAsset("Station 1-200 Lats.json");
+        String json = loadJSONFromAsset("I5N_lat_lng.json");
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
                 JSONObject jObj = null;
                 try {
                     jObj = items.getJSONObject(i);
-                    //Double check the id later
-                    Station station = stationList.getStationFromPostion(i);
+                    Station station = stationList.getStationFromCaPm(jObj.getString("ca_pm"));
                     station.setLat(jObj.getString("lat"));
                     station.setLng(jObj.getString("lng"));
                 } catch (JSONException e) {

@@ -52,6 +52,15 @@ public class StationList {
         return stations.get(i);
     }
 
+    public Station getStationFromCaPm(String capm) {
+        for (Station station : stations) {
+            if (station.getCA_PM().equals(capm)) {
+                return station;
+            }
+        }
+        return null;
+    }
+
     public void updateStation(Station station) {
         int stationID = station.getID();
         stations.set(getStationPostion(stationID), station);
