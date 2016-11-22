@@ -1,6 +1,7 @@
 package me.ryanmiles.trafficpredictor.helper;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -8,9 +9,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import me.ryanmiles.trafficpredictor.async.GetDirectionsAsync;
+import me.ryanmiles.trafficpredictor.model.LatLngData;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
 
@@ -19,6 +22,7 @@ import me.ryanmiles.trafficpredictor.model.StationList;
  */
 
 public class JsonUtil {
+    private static final String TAG = "JsonUtil";
     private StationList mStationList;
     private Context mContext;
 
@@ -69,7 +73,9 @@ public class JsonUtil {
                 station.setSensorType(jObj.getString("Sensor Type"));
                 station.setHOV(jObj.getString("HOV"));
                 station.setMS_ID(jObj.getString("MS ID"));
-                mStationList.addStation(station);
+                if (station.getType().equals("Mainline")) {
+                    mStationList.addStation(station);
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -95,25 +101,39 @@ public class JsonUtil {
     }
 
     public void loadLatLongData() {
+        ArrayList<LatLngData> latLngDatas = new ArrayList<>();
         String json = loadJSONFromAsset("I5N_lat_lng.json");
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
                 JSONObject jObj = null;
                 jObj = items.getJSONObject(i);
-                try {
-                    Station station = mStationList.getStationFromCaPm(jObj.getString("ca_pm"));
-                    //Station station = mStationList.getStationFromCaPm(jObj.getString("name"));
-                    station.setLat(jObj.getString("lat"));
-                    station.setLng(jObj.getString("lng"));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                LatLngData latLngData = new LatLngData();
+                latLngData.setStationId((jObj.getInt("link")));
+                latLngData.setLat(jObj.getString("lat"));
+                latLngData.setLng(jObj.getString("lng"));
+                latLngDatas.add(latLngData);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        for (Station station : mStationList.getStations()) {
+            LatLngData data = null;
+
+            for (LatLngData latLngData : latLngDatas) {
+                if (latLngData.getStationId() == station.getID()) {
+                    data = latLngData;
+                }
+            }
+            try {
+                station.setLat(data.getLat());
+                station.setLng(data.getLng());
+            } catch (Exception e) {
+                Log.e(TAG, "Error setting Lat and Lng", e);
+            }
+        }
     }
+
 
     public void loadAllDelayData() {
         //Set default delay values for each station for all months, doftw, and 24 hr cycle
@@ -140,7 +160,6 @@ public class JsonUtil {
             String destlong = mStationList.getStationFromPostion(i + 1).getLng();
 
 
-            //Also only mainland
             if (!sourcelat.equals("") || !sourcelong.equals("") || !destlat.equals("") || !destlong.equals("")) {
                 String url = Util.makeURL(sourcelat, sourcelong, destlat, destlong);
                 try {

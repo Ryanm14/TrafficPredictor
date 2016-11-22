@@ -52,9 +52,9 @@ public class StationList {
         return stations.get(i);
     }
 
-    public Station getStationFromCaPm(String capm) {
+    public Station getStationFromID(int id) {
         for (Station station : stations) {
-            if (station.getCA_PM().equals(capm)) {
+            if (station.getID() == id) {
                 return station;
             }
         }
@@ -76,4 +76,13 @@ public class StationList {
     }
 
 
+    public ArrayList<Station> getStationsType(String str) {
+        ArrayList<Station> temp = new ArrayList<>();
+        for (Station station : stations) {
+            if (station.getType().equals(str)) {
+                temp.add(station);
+            }
+        }
+        return stations;
+    }
 }

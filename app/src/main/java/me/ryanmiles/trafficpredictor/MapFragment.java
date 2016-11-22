@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import me.ryanmiles.trafficpredictor.event.UpdateDoftwEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateMonthEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateTimesEvent;
+import me.ryanmiles.trafficpredictor.helper.SaveData;
 import me.ryanmiles.trafficpredictor.helper.Util;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
@@ -128,7 +129,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         }
         mPolylines.clear();
 
-        for (Station station : stationList.getStations()) {
+        for (Station station : stationList.getStationsType("Mainline")) {
             if (station.getDirections() != null) {
                 String color = Util.getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
                 Polyline polyline = googleMap.addPolyline(new PolylineOptions()
@@ -225,6 +226,9 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                 for (Marker marker : mMarkers) {
                     marker.setVisible(visible);
                 }
+                break;
+            case R.id.reset:
+                SaveData.delete();
                 break;
 
         }

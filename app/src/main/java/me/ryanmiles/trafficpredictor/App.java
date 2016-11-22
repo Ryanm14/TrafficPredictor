@@ -24,6 +24,8 @@ public class App extends Application {
 
         //Initialize Saving Library
         Paper.init(this);
+        //Temp
+        //SaveData.delete();
 
         //Initalize JsonUtil
         mJsonUtil = new JsonUtil(this);
@@ -39,8 +41,8 @@ public class App extends Application {
             //Load lat and long data from json and assign to a station
             mJsonUtil.loadLatLongData();
 
-            //Load lat and long data between stations
-            //loadPathData();
+            //Load lat and long data between
+            mJsonUtil.loadPathData();
 
             //Save stations for faster load time and limit api usage
             SaveData.saveStations(stationList.getStations());
@@ -48,6 +50,7 @@ public class App extends Application {
 
         } else {
             //Not first time
+
             //Get saved data and set the stationList
             stationList.setStationList(SaveData.loadStations());
             Log.d(TAG, "Loaded Stations from memory");

@@ -4,4 +4,8 @@
         android:id="@+id/toggleMarkers"
         android:showAsAction="never"
         android:title="Toggle Markers"/>
+    <item
+        android:id="@+id/reset"
+        android:showAsAction="never"
+        android:title="Reset"/>
 </menu>

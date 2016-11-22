@@ -33,4 +33,8 @@ public class SaveData {
         Log.i(TAG, "Loading Stations");
         return Paper.book().read(STATIONS_KEY, null);
     }
+
+    public static void delete() {
+        Paper.book().destroy();
+    }
 }
