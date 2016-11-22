@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import me.ryanmiles.trafficpredictor.event.UpdateDoftwEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateMonthEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateTimesEvent;
+import me.ryanmiles.trafficpredictor.helper.Util;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
 
@@ -63,6 +64,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     private int mTimePos = 0;
     private ArrayList<Polyline> mPolylines;
     private ArrayList<Marker> mMarkers;
+    private Station tempStation;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -101,13 +103,13 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                         options.title(station.getName() + " (" + station.getID() + ")");
                         options.snippet("Click for more details");
                         options.icon(BitmapDescriptorFactory.defaultMarker());
+                        tempStation = station;
                         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                             @Override
                             public void onInfoWindowClick(Marker marker) {
-                                Station station1 = (Station) marker.getTag();
                                 new MaterialDialog.Builder(getActivity())
-                                        .title(station1.getName() + " (" + station1.getID() + "}")
-                                        .content(station1.getInfo()).show();
+                                        .title(tempStation.getName() + " (" + tempStation.getID() + "}")
+                                        .content(tempStation.getInfo()).show();
                             }
                         });
                         mMarkers.add(googleMap.addMarker(options));
@@ -128,7 +130,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
 
         for (Station station : stationList.getStations()) {
             if (station.getDirections() != null) {
-                String color = getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
+                String color = Util.getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
                 Polyline polyline = googleMap.addPolyline(new PolylineOptions()
                         .addAll(station.getDirections())
                         .width(12)
@@ -140,18 +142,6 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
         }
 
     }
-
-    //TODO Calcaulte Delay categories
-    private String getColor(double dataDelayMax) {
-        if (dataDelayMax <= 3) {
-            return "#98fb98";
-        } else if (dataDelayMax <= 20) {
-            return "#ffff00";
-        } else {
-            return "#ff0000";
-        }
-    }
-
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {

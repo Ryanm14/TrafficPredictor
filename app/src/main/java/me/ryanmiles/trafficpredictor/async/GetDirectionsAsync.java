@@ -1,5 +1,6 @@
-package me.ryanmiles.trafficpredictor;
+package me.ryanmiles.trafficpredictor.async;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
@@ -7,7 +8,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,17 +16,21 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Ryan Miles on 11/10/2016.
+ * Created by Ryan Miles on 11/21/2016.
  */
 
-public class JSONParser {
+public class GetDirectionsAsync extends AsyncTask<Void, Void, String> {
+    String url, json;
+    InputStream is;
 
-    static InputStream is = null;
-    static JSONObject jObj = null;
-    private static String json = "";
+    public GetDirectionsAsync(String urlPass) {
+        url = urlPass;
+    }
 
-    // constructor
-    public JSONParser() {
+    @Override
+    protected String doInBackground(Void... params) {
+        String json = getJSONFromUrl(url);
+        return json;
     }
 
     public String getJSONFromUrl(String url) {
@@ -65,4 +69,5 @@ public class JSONParser {
         return json;
 
     }
+
 }
