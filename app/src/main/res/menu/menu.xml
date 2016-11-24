@@ -8,4 +8,8 @@
         android:id="@+id/reset"
         android:showAsAction="never"
         android:title="Reset"/>
+    <item
+        android:id="@+id/line"
+        android:showAsAction="never"
+        android:title="Line"/>
 </menu>

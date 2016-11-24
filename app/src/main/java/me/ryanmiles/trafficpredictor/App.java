@@ -8,6 +8,8 @@ import me.ryanmiles.trafficpredictor.helper.JsonUtil;
 import me.ryanmiles.trafficpredictor.helper.SaveData;
 import me.ryanmiles.trafficpredictor.model.StationList;
 
+import static me.ryanmiles.trafficpredictor.helper.Constants.mStationNames;
+
 
 /**
  * Created by Ryan Miles on 10/19/2016.
@@ -25,7 +27,7 @@ public class App extends Application {
         //Initialize Saving Library
         Paper.init(this);
         //Temp
-        //SaveData.delete();
+        //    SaveData.delete();
 
         //Initalize JsonUtil
         mJsonUtil = new JsonUtil(this);
@@ -36,10 +38,14 @@ public class App extends Application {
         //On app first run
         if (SaveData.loadStations() == null) {
             //Load station data from json
-            mJsonUtil.LoadStationsFromJson();
+            for (String mStationName : mStationNames) {
+                mJsonUtil.LoadStationsFromJson(mStationName + "_Stations.json");
+                mJsonUtil.loadLatLongData(mStationName + "_lat_lng.json");
+            }
+
 
             //Load lat and long data from json and assign to a station
-            mJsonUtil.loadLatLongData();
+
 
             //Load lat and long data between
             mJsonUtil.loadPathData();

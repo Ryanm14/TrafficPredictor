@@ -35,6 +35,9 @@ import me.ryanmiles.trafficpredictor.event.UpdateMonthEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateTimesEvent;
 import me.ryanmiles.trafficpredictor.helper.SaveData;
 import me.ryanmiles.trafficpredictor.helper.Util;
+import me.ryanmiles.trafficpredictor.model.DayOfTheWeek;
+import me.ryanmiles.trafficpredictor.model.Hour;
+import me.ryanmiles.trafficpredictor.model.Month;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
 
@@ -104,6 +107,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                         options.title(station.getName() + " (" + station.getID() + ")");
                         options.snippet("Click for more details");
                         options.icon(BitmapDescriptorFactory.defaultMarker());
+
                         tempStation = station;
                         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                             @Override
@@ -113,6 +117,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                                         .content(tempStation.getInfo()).show();
                             }
                         });
+
                         mMarkers.add(googleMap.addMarker(options));
                     }
                 }
@@ -124,17 +129,14 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     private void connectLines() {
         Log.d(TAG, "connectLines: ");
 
-        for (Polyline polyline : mPolylines) {
-            polyline.remove();
-        }
-        mPolylines.clear();
+        clearPolyLines();
 
-        for (Station station : stationList.getStationsType("Mainline")) {
+        for (Station station : stationList.getStations()) {
             if (station.getDirections() != null) {
                 String color = Util.getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
                 Polyline polyline = googleMap.addPolyline(new PolylineOptions()
                         .addAll(station.getDirections())
-                        .width(12)
+                        .width(5)
                         .color(Color.parseColor(color))
                         .geodesic(true)
                 );
@@ -142,6 +144,13 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
             }
         }
 
+    }
+
+    private void clearPolyLines() {
+        for (Polyline polyline : mPolylines) {
+            polyline.remove();
+        }
+        mPolylines.clear();
     }
 
     @Override
@@ -230,9 +239,38 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
             case R.id.reset:
                 SaveData.delete();
                 break;
+            case R.id.line:
+                Line();
+                break;
 
         }
         return true;
+
+    }
+
+    private void Line() {
+        clearPolyLines();
+        for (int i = 0; i < stationList.getStations().size() - 1; i++) {
+            PolylineOptions line = new PolylineOptions();
+            try {
+                if (stationList.getStationFromPostion(i).getFwy().equals(stationList.getStationFromPostion(i).getFwy())) {
+                    line.add(new LatLng(Double.parseDouble(stationList.getStationFromPostion(i).getLat()), Double.parseDouble(stationList.getStationFromPostion(i).getLng())),
+                            new LatLng(Double.parseDouble(stationList.getStationFromPostion(i + 1).getLat()), Double.parseDouble(stationList.getStationFromPostion(i + 1).getLng())));
+                }
+                Station station2 = stationList.getStationFromPostion(i);
+                Month month = station2.getmMonths().get(mMonthPos);
+                DayOfTheWeek dayOfTheWeek = month.getDays().get(mDoftwPos);
+                Hour hour = dayOfTheWeek.getHours().get(mTimePos);
+                double value = hour.getDelay();
+                String color = Util.getColor(value);
+                Log.v(TAG, "i: " + i + " ID: " + stationList.getStationFromPostion(i).getID() + " Delay:" + stationList.getStationFromPostion(i).getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
+                line.width(5).color(Color.parseColor(color));
+                googleMap.addPolyline(line);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
 
     }
 

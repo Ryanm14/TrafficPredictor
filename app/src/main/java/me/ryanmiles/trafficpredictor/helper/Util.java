@@ -117,9 +117,9 @@ public class Util {
     }
 
     public static String getColor(double dataDelayMax) {
-        if (dataDelayMax <= 3) {
+        if (dataDelayMax <= 0) {
             return "#98fb98";
-        } else if (dataDelayMax <= 20) {
+        } else if (dataDelayMax <= 5) {
             return "#ffff00";
         } else {
             return "#ff0000";

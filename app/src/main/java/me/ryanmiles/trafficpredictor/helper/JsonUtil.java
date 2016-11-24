@@ -17,6 +17,8 @@ import me.ryanmiles.trafficpredictor.model.LatLngData;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
 
+import static me.ryanmiles.trafficpredictor.helper.Constants.mStationNames;
+
 /**
  * Created by Ryan Miles on 11/21/2016.
  */
@@ -48,32 +50,32 @@ public class JsonUtil {
         return json;
     }
 
-    public void LoadStationsFromJson() {
+    public void LoadStationsFromJson(String jsonFile) {
         //Load json station data to Java Objects
-        String json = loadJSONFromAsset("I5N_Stations.json");
+        String json = loadJSONFromAsset(jsonFile);
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
                 JSONObject jObj = null;
                 jObj = items.getJSONObject(i);
-                Station station = new Station();
-                station.setFwy(jObj.getString("Fwy"));
-                station.setDistrict(jObj.getInt("District"));
-                station.setCounty(jObj.getString("County"));
-                station.setCity(jObj.getString("City"));
-                station.setCA_PM(jObj.getString("CA PM"));
-                station.setAbs_PM(jObj.getDouble("Abs PM"));
-                if (!jObj.isNull("Length")) {
-                    station.setLength(jObj.getDouble("Length"));
-                }
-                station.setID(jObj.getInt("ID"));
-                station.setName(jObj.getString("Name"));
-                station.setLanes(jObj.getInt("Lanes"));
-                station.setType(jObj.getString("Type"));
-                station.setSensorType(jObj.getString("Sensor Type"));
-                station.setHOV(jObj.getString("HOV"));
-                station.setMS_ID(jObj.getString("MS ID"));
-                if (station.getType().equals("Mainline")) {
+                if (jObj.getString("Type").equals("Mainline")) {
+                    Station station = new Station();
+                    station.setFwy(jObj.getString("Fwy"));
+                    station.setDistrict(jObj.getInt("District"));
+                    station.setCounty(jObj.getString("County"));
+                    station.setCity(jObj.getString("City"));
+                    station.setCA_PM(jObj.getString("CA PM"));
+                    station.setAbs_PM(jObj.getDouble("Abs PM"));
+                    if (!jObj.isNull("Length")) {
+                        station.setLength(jObj.getDouble("Length"));
+                    }
+                    station.setID(jObj.getInt("ID"));
+                    station.setName(jObj.getString("Name"));
+                    station.setLanes(jObj.getInt("Lanes"));
+                    station.setType(jObj.getString("Type"));
+                    station.setSensorType(jObj.getString("Sensor Type"));
+                    station.setHOV(jObj.getString("HOV"));
+                    station.setMS_ID(jObj.getString("MS ID"));
                     mStationList.addStation(station);
                 }
             }
@@ -100,9 +102,9 @@ public class JsonUtil {
         }
     }
 
-    public void loadLatLongData() {
+    public void loadLatLongData(String jsonFile) {
         ArrayList<LatLngData> latLngDatas = new ArrayList<>();
-        String json = loadJSONFromAsset("I5N_lat_lng.json");
+        String json = loadJSONFromAsset(jsonFile);
         try {
             JSONArray items = new JSONArray(json);
             for (int i = 0; i < items.length(); i++) {
@@ -142,12 +144,18 @@ public class JsonUtil {
         }
 
         //Loop through each month and Doftw and load delay json data
-        for (int i = 0; i < 1; i++) {
-            //month
-            for (int j = 0; j < 7; j++) {
-                //DOFTW
-                String load = "I5N_" + Util.getMonth(i) + "_" + Util.getDay(j) + ".json";
-                loadDelayDataToStations(load, i, j);
+        for (String mStationName : mStationNames) {
+            String name = mStationName + "_";
+
+            for (int i = 0; i < 1; i++) { //12
+                //months
+
+                for (int j = 0; j < 1; j++) { //7
+                    //DOFTW
+
+                    String load = name + Util.getMonth(i) + "_" + Util.getDay(j) + ".json";
+                    loadDelayDataToStations(load, i, j);
+                }
             }
         }
     }
@@ -158,10 +166,13 @@ public class JsonUtil {
             String sourcelong = mStationList.getStationFromPostion(i).getLng();
             String destlat = mStationList.getStationFromPostion(i + 1).getLat();
             String destlong = mStationList.getStationFromPostion(i + 1).getLng();
+            String intersect = mStationList.getStationFromPostion(i).getFwy();
+            String nextInteresect = mStationList.getStationFromPostion(i + 1).getFwy();
 
 
-            if (!sourcelat.equals("") || !sourcelong.equals("") || !destlat.equals("") || !destlong.equals("")) {
+            if (!sourcelat.equals("") && !sourcelong.equals("") && !destlat.equals("") && !destlong.equals("") && intersect.equals(nextInteresect)) {
                 String url = Util.makeURL(sourcelat, sourcelong, destlat, destlong);
+                Log.v(TAG, "URL: " + url);
                 try {
                     String json2 = new GetDirectionsAsync(url).execute().get();
                     mStationList.getStationFromPostion(i).setDirections(json2);
