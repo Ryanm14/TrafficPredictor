@@ -1,5 +1,7 @@
 package me.ryanmiles.trafficpredictor.model;
 
+import android.util.Log;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;
@@ -69,6 +71,7 @@ public class Station {
             JSONObject overviewPolylines = routes.getJSONObject("overview_polyline");
             String encodedString = overviewPolylines.getString("points");
             directions = decodePoly(encodedString);
+            Log.d("Stations", "ID: " + getID() + " encoded String:" + encodedString + " Directions:" + directions);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -104,7 +107,7 @@ public class Station {
                     (((double) lng / 1E5)));
             poly.add(p);
         }
-
+        Log.d("Stations", "Poly Returned: " + poly + " ID:" + getID());
         return poly;
     }
 
@@ -232,12 +235,12 @@ public class Station {
         return HOV;
     }
 
-    public void setHOV(String HOV) {
-        this.HOV = !HOV.equals("No");
-    }
-
     public void setHOV(boolean HOV) {
         this.HOV = HOV;
+    }
+
+    public void setHOV(String HOV) {
+        this.HOV = !HOV.equals("No");
     }
 
     public String getMS_ID() {
@@ -284,7 +287,9 @@ public class Station {
                 "\nType: " + type +
                 "\nSensor Type: " + sensorType +
                 "\nHOV: " + HOV +
-                "\nMS ID: " + MS_ID;
+                "\nMS ID: " + MS_ID +
+                "\nLat:" + lat +
+                "\nLng:" + lng;
     }
 
 

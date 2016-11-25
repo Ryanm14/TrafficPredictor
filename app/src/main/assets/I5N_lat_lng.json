@@ -1506,8 +1506,8 @@
     "link": 1115277,
     "link-href": "http://pems.dot.ca.gov/?html_x=57&report_form=1&dow_0=on&dow_1=on&dow_2=on&dow_3=on&dow_4=on&dow_5=on&dow_6=on&start_pm=.05&end_pm=539.07&holidays=on&pagenum_all=1&fwy=5&dir=N&station_id=1115277&dnode=VDS",
     "ca_pm": "R32.79",
-    "lat": 32.930695,
-    "lng": -117.240733,
+    "lat": 32.932271,
+    "lng": -117.241036,
     "abs_pm": 32.68,
     "name": "NB 5 BYP @ CRML VLLY"
   },
@@ -2010,8 +2010,8 @@
     "link": 1108437,
     "link-href": "http://pems.dot.ca.gov/?html_x=57&report_form=1&dow_0=on&dow_1=on&dow_2=on&dow_3=on&dow_4=on&dow_5=on&dow_6=on&start_pm=.05&end_pm=539.07&holidays=on&pagenum_all=1&fwy=5&dir=N&station_id=1108437&dnode=VDS",
     "ca_pm": "R33.147",
-    "lat": 32.935788,
-    "lng": -117.241314,
+    "lat": 32.932244,
+    "lng": -117.241031,
     "abs_pm": 33.04,
     "name": "CARMEL VALLEY ROAD"
   },
@@ -3171,8 +3171,8 @@
     "link": 1115323,
     "link-href": "http://pems.dot.ca.gov/?html_x=57&report_form=1&dow_0=on&dow_1=on&dow_2=on&dow_3=on&dow_4=on&dow_5=on&dow_6=on&start_pm=.05&end_pm=539.07&holidays=on&pagenum_all=1&fwy=5&dir=N&station_id=1115323&dnode=VDS",
     "ca_pm": "R59.421",
-    "lat": 33.268349,
-    "lng": -117.436582,
+    "lat": 33.211043,
+    "lng": -117.38743,
     "abs_pm": 59.31,
     "name": "NB 5 @ HARBOR"
   },
@@ -6286,7 +6286,7 @@
     "link-href": "http://pems.dot.ca.gov/?html_x=57&report_form=1&dow_0=on&dow_1=on&dow_2=on&dow_3=on&dow_4=on&dow_5=on&dow_6=on&start_pm=.05&end_pm=539.07&holidays=on&pagenum_all=1&fwy=5&dir=N&station_id=1210814&dnode=VDS",
     "ca_pm": "27.7",
     "lat": 33.720695,
-    "lng": -117.796397,
+    "lng": -117.134988,
     "abs_pm": 99.95,
     "name": "JAMBOREE 2"
   },
@@ -6294,7 +6294,7 @@
     "link": 1114219,
     "link-href": "http://pems.dot.ca.gov/?html_x=57&report_form=1&dow_0=on&dow_1=on&dow_2=on&dow_3=on&dow_4=on&dow_5=on&dow_6=on&start_pm=.05&end_pm=539.07&holidays=on&pagenum_all=1&fwy=5&dir=N&station_id=1114219&dnode=VDS",
     "ca_pm": "R12.85",
-    "lat": 32.694337,
+    "lat": 32.695918,
     "lng": -117.124759,
     "abs_pm": 12.75,
     "name": ".23 M N/O 28TH ST"

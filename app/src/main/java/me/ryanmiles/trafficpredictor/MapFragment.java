@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.common.ConnectionResult;
@@ -69,6 +70,7 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
     private ArrayList<Polyline> mPolylines;
     private ArrayList<Marker> mMarkers;
     private Station tempStation;
+    private int temp1 = 0;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -99,6 +101,12 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                 googleMap.setTrafficEnabled(false);
                 googleMap.getUiSettings().setZoomControlsEnabled(true);
 
+                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                    @Override
+                    public void onMapClick(LatLng latLng) {
+                        nextThing();
+                    }
+                });
 
                 //Marker
                 for (Station station : stationList.getStations()) {
@@ -107,11 +115,11 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                         options.title(station.getName() + " (" + station.getID() + ")");
                         options.snippet("Click for more details");
                         options.icon(BitmapDescriptorFactory.defaultMarker());
-
-                        tempStation = station;
                         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                             @Override
                             public void onInfoWindowClick(Marker marker) {
+                                int p = mMarkers.indexOf(marker);
+                                tempStation = stationList.getStationFromPostion(p);
                                 new MaterialDialog.Builder(getActivity())
                                         .title(tempStation.getName() + " (" + tempStation.getID() + "}")
                                         .content(tempStation.getInfo()).show();
@@ -124,6 +132,31 @@ public class MapFragment extends SupportMapFragment implements GoogleApiClient.C
                 connectLines();
             }
         });
+    }
+
+    private void nextThing() {
+        for (Marker marker : mMarkers) {
+            marker.setVisible(false);
+        }
+
+        clearPolyLines();
+
+        mMarkers.get(temp1).setVisible(true);
+        mMarkers.get(temp1 + 1).setVisible(true);
+
+        Station station = stationList.getStationFromPostion(temp1);
+        if (station.getDirections() != null) {
+            String color = Util.getColor(station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay());
+            Polyline polyline = googleMap.addPolyline(new PolylineOptions()
+                    .addAll(station.getDirections())
+                    .width(5)
+                    .color(Color.parseColor(color))
+                    .geodesic(true)
+            );
+            Toast.makeText(getActivity(), "int i: " + temp1 + " Delay: " + station.getmMonths().get(mMonthPos).getDays().get(mDoftwPos).getHours().get(mTimePos).getDelay(), Toast.LENGTH_SHORT).show();
+            mPolylines.add(polyline);
+        }
+        temp1++;
     }
 
     private void connectLines() {
