@@ -150,7 +150,7 @@ public class JsonUtil {
             for (int i = 0; i < 1; i++) { //12
                 //months
 
-                for (int j = 0; j < 1; j++) { //7
+                for (int j = 0; j < 7; j++) { //7
                     //DOFTW
 
                     String load = name + Util.getMonth(i) + "_" + Util.getDay(j) + ".json";
@@ -161,6 +161,8 @@ public class JsonUtil {
     }
 
     public void loadPathData() {
+        int apiCalls = SaveData.getCalls();
+        int total = mStationList.getStations().size();
         for (int i = 0; i < mStationList.getStations().size() - 1; i++) {
             String sourcelat = mStationList.getStationFromPostion(i).getLat();
             String sourcelong = mStationList.getStationFromPostion(i).getLng();
@@ -171,8 +173,9 @@ public class JsonUtil {
 
 
             if (!sourcelat.equals("") && !sourcelong.equals("") && !destlat.equals("") && !destlong.equals("") && intersect.equals(nextInteresect)) {
-                String url = Util.makeURL(sourcelat, sourcelong, destlat, destlong);
-                Log.v(TAG, "URL: " + url);
+                String url = Util.makeURL(sourcelat, sourcelong, destlat, destlong, Util.getApi(apiCalls));
+                apiCalls++;
+                Log.v(TAG, i + " / " + total + " URL: " + url);
                 try {
                     String json2 = new GetDirectionsAsync(url).execute().get();
                     mStationList.getStationFromPostion(i).setDirections(json2);
@@ -181,6 +184,7 @@ public class JsonUtil {
                 }
             }
         }
+        SaveData.saveCalls(apiCalls);
     }
 
 }

@@ -1,0 +1,1170 @@
+[
+  {
+    "link": 770385,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770385&dnode=VDS",
+    "ca_pm": "R19.1",
+    "lat": 34.206925,
+    "lng": -118.21372,
+    "abs_pm": 19.08
+  },
+  {
+    "link": 814566,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814566&dnode=VDS",
+    "ca_pm": "18.88",
+    "lat": 34.135873,
+    "lng": -117.381654,
+    "abs_pm": 11.6
+  },
+  {
+    "link": 717667,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717667&dnode=VDS",
+    "ca_pm": "R30.95",
+    "lat": 34.148636,
+    "lng": -118.048053,
+    "abs_pm": 31.24
+  },
+  {
+    "link": 765486,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=765486&dnode=VDS",
+    "ca_pm": "R40.564",
+    "lat": 34.120787,
+    "lng": -117.890798,
+    "abs_pm": 40.85
+  },
+  {
+    "link": 819685,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819685&dnode=VDS",
+    "ca_pm": "R23.555",
+    "lat": 34.145375,
+    "lng": -117.290041,
+    "abs_pm": 75.99
+  },
+  {
+    "link": 717672,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717672&dnode=VDS",
+    "ca_pm": "R32.06",
+    "lat": 34.146752,
+    "lng": -118.029146,
+    "abs_pm": 32.35
+  },
+  {
+    "link": 814211,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814211&dnode=VDS",
+    "ca_pm": "16.16",
+    "lat": 34.135888,
+    "lng": -117.429179,
+    "abs_pm": 8.88
+  },
+  {
+    "link": 809126,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809126&dnode=VDS",
+    "ca_pm": "10",
+    "lat": 34.136243,
+    "lng": -117.52205,
+    "abs_pm": 62.44
+  },
+  {
+    "link": 773193,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=773193&dnode=VDS",
+    "ca_pm": "R32.5",
+    "lat": 34.143558,
+    "lng": -118.022467,
+    "abs_pm": 32.79
+  },
+  {
+    "link": 809070,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809070&dnode=VDS",
+    "ca_pm": "8.7",
+    "lat": 34.136398,
+    "lng": -117.544728,
+    "abs_pm": 61.14
+  },
+  {
+    "link": 809211,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809211&dnode=VDS",
+    "ca_pm": "2.8",
+    "lat": 34.134814,
+    "lng": -117.647585,
+    "abs_pm": 55.24
+  },
+  {
+    "link": 717638,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717638&dnode=VDS",
+    "ca_pm": "R27.16",
+    "lat": 34.152187,
+    "lng": -118.117782,
+    "abs_pm": 27.14
+  },
+  {
+    "link": 770116,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770116&dnode=VDS",
+    "ca_pm": "R14.41",
+    "lat": 34.234317,
+    "lng": -118.286992,
+    "abs_pm": 14.39
+  },
+  {
+    "link": 821666,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=821666&dnode=VDS",
+    "ca_pm": "R30.8",
+    "lat": 34.099457,
+    "lng": -117.20006,
+    "abs_pm": 83.24
+  },
+  {
+    "link": 813993,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=813993&dnode=VDS",
+    "ca_pm": "16.5",
+    "lat": 34.13588,
+    "lng": -117.423256,
+    "abs_pm": 9.22
+  },
+  {
+    "link": 772917,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772917&dnode=VDS",
+    "ca_pm": "R41.1",
+    "lat": 34.120865,
+    "lng": -117.881465,
+    "abs_pm": 41.39
+  },
+  {
+    "link": 767984,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767984&dnode=VDS",
+    "ca_pm": "R50",
+    "lat": 34.120261,
+    "lng": -117.728252,
+    "abs_pm": 50.29
+  },
+  {
+    "link": 717628,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717628&dnode=VDS",
+    "ca_pm": "R24.83",
+    "lat": 34.152216,
+    "lng": -118.156144,
+    "abs_pm": 24.81
+  },
+  {
+    "link": 816219,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=816219&dnode=VDS",
+    "ca_pm": "12.148",
+    "lat": 34.136485,
+    "lng": -117.484369,
+    "abs_pm": 64.59
+  },
+  {
+    "link": 767896,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767896&dnode=VDS",
+    "ca_pm": "R47.5",
+    "lat": 34.119372,
+    "lng": -117.771695,
+    "abs_pm": 47.79
+  },
+  {
+    "link": 772903,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772903&dnode=VDS",
+    "ca_pm": "R39.9",
+    "lat": 34.120955,
+    "lng": -117.902358,
+    "abs_pm": 40.19
+  },
+  {
+    "link": 809350,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809350&dnode=VDS",
+    "ca_pm": "2.5",
+    "lat": 34.134701,
+    "lng": -117.652818,
+    "abs_pm": 54.94
+  },
+  {
+    "link": 769984,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769984&dnode=VDS",
+    "ca_pm": "R20.42",
+    "lat": 34.202989,
+    "lng": -118.191827,
+    "abs_pm": 20.4
+  },
+  {
+    "link": 769806,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769806&dnode=VDS",
+    "ca_pm": "R21",
+    "lat": 34.196934,
+    "lng": -118.185042,
+    "abs_pm": 20.98
+  },
+  {
+    "link": 772953,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772953&dnode=VDS",
+    "ca_pm": "R42.6",
+    "lat": 34.117359,
+    "lng": -117.85626,
+    "abs_pm": 42.89
+  },
+  {
+    "link": 769758,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769758&dnode=VDS",
+    "ca_pm": "R44.6",
+    "lat": 34.120306,
+    "lng": -117.822311,
+    "abs_pm": 44.89
+  },
+  {
+    "link": 717646,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717646&dnode=VDS",
+    "ca_pm": "R28.7",
+    "lat": 34.151406,
+    "lng": -118.091041,
+    "abs_pm": 28.68
+  },
+  {
+    "link": 717640,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717640&dnode=VDS",
+    "ca_pm": "R27.65",
+    "lat": 34.152301,
+    "lng": -118.109239,
+    "abs_pm": 27.63
+  },
+  {
+    "link": 769847,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769847&dnode=VDS",
+    "ca_pm": "R18.2",
+    "lat": 34.211728,
+    "lng": -118.228265,
+    "abs_pm": 18.18
+  },
+  {
+    "link": 767942,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767942&dnode=VDS",
+    "ca_pm": "R48.8",
+    "lat": 34.119475,
+    "lng": -117.749005,
+    "abs_pm": 49.09
+  },
+  {
+    "link": 773154,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=773154&dnode=VDS",
+    "ca_pm": "R30.4",
+    "lat": 34.148585,
+    "lng": -118.057432,
+    "abs_pm": 30.69
+  },
+  {
+    "link": 814526,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814526&dnode=VDS",
+    "ca_pm": "14.88",
+    "lat": null,
+    "lng": null,
+    "abs_pm": 67.32
+  },
+  {
+    "link": 767925,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767925&dnode=VDS",
+    "ca_pm": "R48.2",
+    "lat": 34.119291,
+    "lng": -117.759529,
+    "abs_pm": 48.49
+  },
+  {
+    "link": 761128,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761128&dnode=VDS",
+    "ca_pm": "R32.86",
+    "lat": 34.140676,
+    "lng": -118.017243,
+    "abs_pm": 33.15
+  },
+  {
+    "link": 717617,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717617&dnode=VDS",
+    "ca_pm": "R22.62",
+    "lat": 34.179921,
+    "lng": -118.167405,
+    "abs_pm": 22.6
+  },
+  {
+    "link": 809294,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809294&dnode=VDS",
+    "ca_pm": ".1",
+    "lat": 34.124085,
+    "lng": -117.691242,
+    "abs_pm": 52.54
+  },
+  {
+    "link": 772932,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772932&dnode=VDS",
+    "ca_pm": "R42.3",
+    "lat": 34.117037,
+    "lng": -117.861494,
+    "abs_pm": 42.59
+  },
+  {
+    "link": 770587,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770587&dnode=VDS",
+    "ca_pm": "R2.75",
+    "lat": 34.321653,
+    "lng": -118.446679,
+    "abs_pm": 2.75
+  },
+  {
+    "link": 819498,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819498&dnode=VDS",
+    "ca_pm": "20.54",
+    "lat": 34.134534,
+    "lng": -117.354995,
+    "abs_pm": 71.96
+  },
+  {
+    "link": 813973,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=813973&dnode=VDS",
+    "ca_pm": "21.4",
+    "lat": 34.13609,
+    "lng": -117.33765,
+    "abs_pm": 14.12
+  },
+  {
+    "link": 770169,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770169&dnode=VDS",
+    "ca_pm": "R24.51",
+    "lat": 34.155812,
+    "lng": -118.158089,
+    "abs_pm": 24.49
+  },
+  {
+    "link": 716143,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=716143&dnode=VDS",
+    "ca_pm": "R44.2",
+    "lat": 34.120911,
+    "lng": -117.829234,
+    "abs_pm": 44.49
+  },
+  {
+    "link": 819514,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819514&dnode=VDS",
+    "ca_pm": "7.73",
+    "lat": 34.136453,
+    "lng": -117.561652,
+    "abs_pm": 60.17
+  },
+  {
+    "link": 769866,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769866&dnode=VDS",
+    "ca_pm": "R17.4",
+    "lat": 34.218398,
+    "lng": -118.239738,
+    "abs_pm": 17.38
+  },
+  {
+    "link": 718469,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=718469&dnode=VDS",
+    "ca_pm": "R40.7",
+    "lat": 34.120764,
+    "lng": -117.88843,
+    "abs_pm": 40.99
+  },
+  {
+    "link": 826110,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=826110&dnode=VDS",
+    "ca_pm": "R21",
+    "lat": 34.134666,
+    "lng": -117.347002,
+    "abs_pm": 72.42
+  },
+  {
+    "link": 771603,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=771603&dnode=VDS",
+    "ca_pm": "R45.66",
+    "lat": 34.11972,
+    "lng": -117.803812,
+    "abs_pm": 45.95
+  },
+  {
+    "link": 761177,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761177&dnode=VDS",
+    "ca_pm": "R35.36",
+    "lat": 34.135237,
+    "lng": -117.975628,
+    "abs_pm": 35.65
+  },
+  {
+    "link": 814480,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814480&dnode=VDS",
+    "ca_pm": "15.959",
+    "lat": 34.135179,
+    "lng": -117.432674,
+    "abs_pm": 8.68
+  },
+  {
+    "link": 819613,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819613&dnode=VDS",
+    "ca_pm": "1.4",
+    "lat": 34.134333,
+    "lng": -117.671953,
+    "abs_pm": 53.84
+  },
+  {
+    "link": 821667,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=821667&dnode=VDS",
+    "ca_pm": "R30.8",
+    "lat": 34.099457,
+    "lng": -117.20006,
+    "abs_pm": 83.24
+  },
+  {
+    "link": 716142,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=716142&dnode=VDS",
+    "ca_pm": "R43.3",
+    "lat": 34.117595,
+    "lng": -117.844142,
+    "abs_pm": 43.59
+  },
+  {
+    "link": 819702,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819702&dnode=VDS",
+    "ca_pm": "R27.8",
+    "lat": 34.131804,
+    "lng": -117.218917,
+    "abs_pm": 80.24
+  },
+  {
+    "link": 814010,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814010&dnode=VDS",
+    "ca_pm": "17.68",
+    "lat": 34.13588,
+    "lng": -117.402691,
+    "abs_pm": 10.4
+  },
+  {
+    "link": 770048,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770048&dnode=VDS",
+    "ca_pm": "R6.2",
+    "lat": 34.285556,
+    "lng": -118.405022,
+    "abs_pm": 6.2
+  },
+  {
+    "link": 819716,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819716&dnode=VDS",
+    "ca_pm": "R31.4",
+    "lat": 34.090795,
+    "lng": -117.200754,
+    "abs_pm": 83.84
+  },
+  {
+    "link": 761165,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761165&dnode=VDS",
+    "ca_pm": "R35.12",
+    "lat": 34.135219,
+    "lng": -117.979798,
+    "abs_pm": 35.41
+  },
+  {
+    "link": 819484,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819484&dnode=VDS",
+    "ca_pm": "14.75",
+    "lat": 34.136017,
+    "lng": -117.438641,
+    "abs_pm": 67.19
+  },
+  {
+    "link": 717633,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717633&dnode=VDS",
+    "ca_pm": "R25.74",
+    "lat": 34.151691,
+    "lng": -118.142523,
+    "abs_pm": 25.72
+  },
+  {
+    "link": 768012,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=768012&dnode=VDS",
+    "ca_pm": "R51",
+    "lat": 34.120041,
+    "lng": -117.710836,
+    "abs_pm": 51.29
+  },
+  {
+    "link": 770103,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770103&dnode=VDS",
+    "ca_pm": "R11.3",
+    "lat": 34.257404,
+    "lng": -118.327764,
+    "abs_pm": 11.3
+  },
+  {
+    "link": 768283,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=768283&dnode=VDS",
+    "ca_pm": "R2.1",
+    "lat": 34.323367,
+    "lng": -118.457366,
+    "abs_pm": 2.1
+  },
+  {
+    "link": 809036,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809036&dnode=VDS",
+    "ca_pm": "8",
+    "lat": 34.136461,
+    "lng": -117.556942,
+    "abs_pm": 60.44
+  },
+  {
+    "link": 770331,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770331&dnode=VDS",
+    "ca_pm": "R6.5",
+    "lat": 34.282287,
+    "lng": -118.401572,
+    "abs_pm": 6.5
+  },
+  {
+    "link": 772857,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772857&dnode=VDS",
+    "ca_pm": "R37.1",
+    "lat": 34.130657,
+    "lng": -117.946351,
+    "abs_pm": 37.39
+  },
+  {
+    "link": 768026,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=768026&dnode=VDS",
+    "ca_pm": "R51.5",
+    "lat": 34.119816,
+    "lng": -117.702095,
+    "abs_pm": 51.79
+  },
+  {
+    "link": 809287,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809287&dnode=VDS",
+    "ca_pm": "R4.7",
+    "lat": 34.13488,
+    "lng": -117.614434,
+    "abs_pm": 57.14
+  },
+  {
+    "link": 819552,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819552&dnode=VDS",
+    "ca_pm": "4.5",
+    "lat": 34.13486,
+    "lng": -117.617924,
+    "abs_pm": 56.94
+  },
+  {
+    "link": 761220,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761220&dnode=VDS",
+    "ca_pm": "R39.05",
+    "lat": 34.125143,
+    "lng": -117.915079,
+    "abs_pm": 39.34
+  },
+  {
+    "link": 770024,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770024&dnode=VDS",
+    "ca_pm": "R4.2",
+    "lat": 34.307175,
+    "lng": -118.428329,
+    "abs_pm": 4.2
+  },
+  {
+    "link": 813980,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=813980&dnode=VDS",
+    "ca_pm": "22.19",
+    "lat": 34.145609,
+    "lng": -117.313965,
+    "abs_pm": 15.79
+  },
+  {
+    "link": 818723,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=818723&dnode=VDS",
+    "ca_pm": "18.53",
+    "lat": 34.135784,
+    "lng": -117.370602,
+    "abs_pm": 70.97
+  },
+  {
+    "link": 809172,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809172&dnode=VDS",
+    "ca_pm": "5.1",
+    "lat": 34.134954,
+    "lng": -117.607455,
+    "abs_pm": 57.54
+  },
+  {
+    "link": 717684,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717684&dnode=VDS",
+    "ca_pm": "R39.64",
+    "lat": 34.120571,
+    "lng": -117.906859,
+    "abs_pm": 39.93
+  },
+  {
+    "link": 717692,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717692&dnode=VDS",
+    "ca_pm": "R41.69",
+    "lat": 34.120461,
+    "lng": -117.871209,
+    "abs_pm": 41.98
+  },
+  {
+    "link": 810273,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=810273&dnode=VDS",
+    "ca_pm": "11.94",
+    "lat": 34.136208,
+    "lng": -117.487983,
+    "abs_pm": 64.38
+  },
+  {
+    "link": 772887,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772887&dnode=VDS",
+    "ca_pm": "R38.5",
+    "lat": 34.128935,
+    "lng": -117.923112,
+    "abs_pm": 38.79
+  },
+  {
+    "link": 770089,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770089&dnode=VDS",
+    "ca_pm": "R11",
+    "lat": 34.2608,
+    "lng": -118.331009,
+    "abs_pm": 11
+  },
+  {
+    "link": 717620,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717620&dnode=VDS",
+    "ca_pm": "R23.16",
+    "lat": 34.174756,
+    "lng": -118.160407,
+    "abs_pm": 23.14
+  },
+  {
+    "link": 717659,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717659&dnode=VDS",
+    "ca_pm": "R30.01",
+    "lat": 34.148554,
+    "lng": -118.064055,
+    "abs_pm": 30.3
+  },
+  {
+    "link": 772872,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772872&dnode=VDS",
+    "ca_pm": "R37.5",
+    "lat": 34.128708,
+    "lng": -117.939757,
+    "abs_pm": 37.79
+  },
+  {
+    "link": 770578,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770578&dnode=VDS",
+    "ca_pm": "R24.462",
+    "lat": 34.156489,
+    "lng": -118.158295,
+    "abs_pm": 24.44
+  },
+  {
+    "link": 809259,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809259&dnode=VDS",
+    "ca_pm": "3.6",
+    "lat": 34.134867,
+    "lng": -117.633626,
+    "abs_pm": 56.04
+  },
+  {
+    "link": 772966,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=772966&dnode=VDS",
+    "ca_pm": "R44.2",
+    "lat": 34.120911,
+    "lng": -117.829234,
+    "abs_pm": 44.49
+  },
+  {
+    "link": 810210,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=810210&dnode=VDS",
+    "ca_pm": "11.125",
+    "lat": 34.136204,
+    "lng": -117.502369,
+    "abs_pm": 63.56
+  },
+  {
+    "link": 761191,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761191&dnode=VDS",
+    "ca_pm": "R36.33",
+    "lat": 34.13449,
+    "lng": -117.958916,
+    "abs_pm": 36.62
+  },
+  {
+    "link": 717635,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717635&dnode=VDS",
+    "ca_pm": "R26.49",
+    "lat": 34.151658,
+    "lng": -118.12944,
+    "abs_pm": 26.47
+  },
+  {
+    "link": 770061,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770061&dnode=VDS",
+    "ca_pm": "R8",
+    "lat": 34.27436,
+    "lng": -118.37804,
+    "abs_pm": 8
+  },
+  {
+    "link": 814506,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814506&dnode=VDS",
+    "ca_pm": "14.15",
+    "lat": 34.13611,
+    "lng": -117.449477,
+    "abs_pm": 66.59
+  },
+  {
+    "link": 821646,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=821646&dnode=VDS",
+    "ca_pm": "R25.7",
+    "lat": 34.142501,
+    "lng": -117.25276,
+    "abs_pm": 78.14
+  },
+  {
+    "link": 770076,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770076&dnode=VDS",
+    "ca_pm": "R9.5",
+    "lat": 34.271968,
+    "lng": -118.351971,
+    "abs_pm": 9.5
+  },
+  {
+    "link": 717631,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717631&dnode=VDS",
+    "ca_pm": "R25.14",
+    "lat": 34.15099,
+    "lng": -118.152369,
+    "abs_pm": 25.12
+  },
+  {
+    "link": 761152,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761152&dnode=VDS",
+    "ca_pm": "R34.15",
+    "lat": 34.135316,
+    "lng": -117.996727,
+    "abs_pm": 34.44
+  },
+  {
+    "link": 717625,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717625&dnode=VDS",
+    "ca_pm": "R24.18",
+    "lat": 34.160546,
+    "lng": -118.158748,
+    "abs_pm": 24.16
+  },
+  {
+    "link": 767970,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767970&dnode=VDS",
+    "ca_pm": "R49.68",
+    "lat": 34.120394,
+    "lng": -117.733824,
+    "abs_pm": 49.97
+  },
+  {
+    "link": 809117,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809117&dnode=VDS",
+    "ca_pm": "9.4",
+    "lat": 34.136302,
+    "lng": -117.532518,
+    "abs_pm": 61.84
+  },
+  {
+    "link": 761141,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761141&dnode=VDS",
+    "ca_pm": "R33.09",
+    "lat": 34.138178,
+    "lng": -118.014556,
+    "abs_pm": 33.38
+  },
+  {
+    "link": 769831,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769831&dnode=VDS",
+    "ca_pm": "R19.8",
+    "lat": 34.206745,
+    "lng": -118.201533,
+    "abs_pm": 19.78
+  },
+  {
+    "link": 768297,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=768297&dnode=VDS",
+    "ca_pm": "R1",
+    "lat": 34.323046,
+    "lng": -118.476388,
+    "abs_pm": 1
+  },
+  {
+    "link": 769819,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769819&dnode=VDS",
+    "ca_pm": "R20",
+    "lat": 34.205892,
+    "lng": -118.198234,
+    "abs_pm": 19.98
+  },
+  {
+    "link": 810280,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=810280&dnode=VDS",
+    "ca_pm": "11.766",
+    "lat": 34.13623,
+    "lng": -117.491062,
+    "abs_pm": 64.21
+  },
+  {
+    "link": 814552,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=814552&dnode=VDS",
+    "ca_pm": "20.76",
+    "lat": 34.136039,
+    "lng": -117.34881,
+    "abs_pm": 13.48
+  },
+  {
+    "link": 819538,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819538&dnode=VDS",
+    "ca_pm": "5.7",
+    "lat": 34.134928,
+    "lng": -117.596985,
+    "abs_pm": 58.14
+  },
+  {
+    "link": 717650,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717650&dnode=VDS",
+    "ca_pm": "R29.46",
+    "lat": 34.147621,
+    "lng": -118.079037,
+    "abs_pm": 29.44
+  },
+  {
+    "link": 809022,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809022&dnode=VDS",
+    "ca_pm": "7",
+    "lat": 34.136045,
+    "lng": -117.574367,
+    "abs_pm": 59.44
+  },
+  {
+    "link": 770599,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770599&dnode=VDS",
+    "ca_pm": "R.32",
+    "lat": 34.31759,
+    "lng": -118.486117,
+    "abs_pm": 0.32
+  },
+  {
+    "link": 819142,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819142&dnode=VDS",
+    "ca_pm": "17.25",
+    "lat": 34.135697,
+    "lng": -117.392521,
+    "abs_pm": 69.69
+  },
+  {
+    "link": 768041,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=768041&dnode=VDS",
+    "ca_pm": "R51.85",
+    "lat": 34.121357,
+    "lng": -117.696262,
+    "abs_pm": 52.14
+  },
+  {
+    "link": 769772,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769772&dnode=VDS",
+    "ca_pm": "R36.6",
+    "lat": 34.133397,
+    "lng": -117.954412,
+    "abs_pm": 36.89
+  },
+  {
+    "link": 767883,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767883&dnode=VDS",
+    "ca_pm": "R47",
+    "lat": 34.119703,
+    "lng": -117.780403,
+    "abs_pm": 47.29
+  },
+  {
+    "link": 770036,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770036&dnode=VDS",
+    "ca_pm": "R5.1",
+    "lat": 34.297523,
+    "lng": -118.41772,
+    "abs_pm": 5.1
+  },
+  {
+    "link": 770567,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770567&dnode=VDS",
+    "ca_pm": "R23.81",
+    "lat": 34.165922,
+    "lng": -118.158257,
+    "abs_pm": 23.79
+  },
+  {
+    "link": 717654,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=717654&dnode=VDS",
+    "ca_pm": "R29.74",
+    "lat": 34.148522,
+    "lng": -118.068683,
+    "abs_pm": 30.03
+  },
+  {
+    "link": 770012,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770012&dnode=VDS",
+    "ca_pm": "R3.4",
+    "lat": 34.315198,
+    "lng": -118.43844,
+    "abs_pm": 3.4
+  },
+  {
+    "link": 819696,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819696&dnode=VDS",
+    "ca_pm": "R24.8",
+    "lat": 34.144545,
+    "lng": -117.268275,
+    "abs_pm": 77.24
+  },
+  {
+    "link": 821652,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=821652&dnode=VDS",
+    "ca_pm": "26.5",
+    "lat": 34.137428,
+    "lng": -117.240179,
+    "abs_pm": 78.94
+  },
+  {
+    "link": 809336,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809336&dnode=VDS",
+    "ca_pm": "1.6",
+    "lat": 34.134363,
+    "lng": -117.668476,
+    "abs_pm": 54.04
+  },
+  {
+    "link": 819723,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819723&dnode=VDS",
+    "ca_pm": "R32.6",
+    "lat": 34.073356,
+    "lng": -117.200851,
+    "abs_pm": 85.04
+  },
+  {
+    "link": 823328,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=823328&dnode=VDS",
+    "ca_pm": "21.51",
+    "lat": 34.134512,
+    "lng": -117.338108,
+    "abs_pm": 72.93
+  },
+  {
+    "link": 769895,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769895&dnode=VDS",
+    "ca_pm": "R15.7",
+    "lat": 34.230849,
+    "lng": -118.265101,
+    "abs_pm": 15.68
+  },
+  {
+    "link": 769880,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769880&dnode=VDS",
+    "ca_pm": "R17",
+    "lat": 34.221426,
+    "lng": -118.245718,
+    "abs_pm": 16.98
+  },
+  {
+    "link": 770354,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770354&dnode=VDS",
+    "ca_pm": "R5.51",
+    "lat": 34.293047,
+    "lng": -118.412995,
+    "abs_pm": 5.51
+  },
+  {
+    "link": 767998,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=767998&dnode=VDS",
+    "ca_pm": "R50.46",
+    "lat": 34.120158,
+    "lng": -117.72024,
+    "abs_pm": 50.75
+  },
+  {
+    "link": 825929,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=825929&dnode=VDS",
+    "ca_pm": "12.291",
+    "lat": 34.136177,
+    "lng": -117.481887,
+    "abs_pm": 64.73
+  },
+  {
+    "link": 816218,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=816218&dnode=VDS",
+    "ca_pm": "12.148",
+    "lat": 34.136485,
+    "lng": -117.484369,
+    "abs_pm": 64.59
+  },
+  {
+    "link": 809202,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809202&dnode=VDS",
+    "ca_pm": "6",
+    "lat": 34.135048,
+    "lng": -117.591753,
+    "abs_pm": 58.44
+  },
+  {
+    "link": 808993,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=808993&dnode=VDS",
+    "ca_pm": "7.4",
+    "lat": 34.136384,
+    "lng": -117.567407,
+    "abs_pm": 59.84
+  },
+  {
+    "link": 809252,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809252&dnode=VDS",
+    "ca_pm": "4.1",
+    "lat": 34.134923,
+    "lng": -117.624903,
+    "abs_pm": 56.54
+  },
+  {
+    "link": 809301,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809301&dnode=VDS",
+    "ca_pm": ".5",
+    "lat": 34.128716,
+    "lng": -117.68609,
+    "abs_pm": 52.94
+  },
+  {
+    "link": 819710,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819710&dnode=VDS",
+    "ca_pm": "R28.7",
+    "lat": 34.129029,
+    "lng": -117.20407,
+    "abs_pm": 81.14
+  },
+  {
+    "link": 761206,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=761206&dnode=VDS",
+    "ca_pm": "R37.92",
+    "lat": 34.129927,
+    "lng": -117.932584,
+    "abs_pm": 38.21
+  },
+  {
+    "link": 809308,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809308&dnode=VDS",
+    "ca_pm": "1",
+    "lat": 34.133268,
+    "lng": -117.678724,
+    "abs_pm": 53.44
+  },
+  {
+    "link": 819599,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819599&dnode=VDS",
+    "ca_pm": "R3.3",
+    "lat": 34.134887,
+    "lng": -117.638861,
+    "abs_pm": 55.74
+  },
+  {
+    "link": 819654,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819654&dnode=VDS",
+    "ca_pm": "4.1",
+    "lat": 34.135134,
+    "lng": -117.624922,
+    "abs_pm": 56.54
+  },
+  {
+    "link": 821645,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=821645&dnode=VDS",
+    "ca_pm": "R25.7",
+    "lat": 34.142501,
+    "lng": -117.25276,
+    "abs_pm": 78.14
+  },
+  {
+    "link": 769788,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769788&dnode=VDS",
+    "ca_pm": "R21.6",
+    "lat": 34.189219,
+    "lng": -118.180753,
+    "abs_pm": 21.58
+  },
+  {
+    "link": 769701,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=769701&dnode=VDS",
+    "ca_pm": "R35.8",
+    "lat": 34.135426,
+    "lng": -117.967987,
+    "abs_pm": 36.09
+  },
+  {
+    "link": 819526,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819526&dnode=VDS",
+    "ca_pm": "6.8",
+    "lat": 34.135797,
+    "lng": -117.577842,
+    "abs_pm": 59.24
+  },
+  {
+    "link": 810245,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=810245&dnode=VDS",
+    "ca_pm": "11.663",
+    "lat": 34.13621,
+    "lng": -117.492893,
+    "abs_pm": 64.1
+  },
+  {
+    "link": 826083,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=826083&dnode=VDS",
+    "ca_pm": "13.16",
+    "lat": 34.136239,
+    "lng": -117.466809,
+    "abs_pm": 65.6
+  },
+  {
+    "link": 770544,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770544&dnode=VDS",
+    "ca_pm": "R7.19",
+    "lat": 34.277404,
+    "lng": -118.391732,
+    "abs_pm": 7.19
+  },
+  {
+    "link": 765477,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=765477&dnode=VDS",
+    "ca_pm": "R39.711",
+    "lat": 34.120655,
+    "lng": -117.905629,
+    "abs_pm": 40
+  },
+  {
+    "link": 816194,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=816194&dnode=VDS",
+    "ca_pm": "8.8",
+    "lat": 34.136385,
+    "lng": -117.542984,
+    "abs_pm": 61.24
+  },
+  {
+    "link": 809343,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=809343&dnode=VDS",
+    "ca_pm": "2",
+    "lat": 34.134219,
+    "lng": -117.661517,
+    "abs_pm": 54.44
+  },
+  {
+    "link": 819478,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=819478&dnode=VDS",
+    "ca_pm": "13.66",
+    "lat": 34.136227,
+    "lng": -117.458134,
+    "abs_pm": 66.1
+  },
+  {
+    "link": 770556,
+    "link-href": "http://pems.dot.ca.gov/?html_x=4&report_form=1&start_pm=.31&end_pm=85.06&pagenum_all=1&fwy=210&dir=E&station_id=770556&dnode=VDS",
+    "ca_pm": "R8.6",
+    "lat": 34.273581,
+    "lng": -118.367587,
+    "abs_pm": 8.6
+  }
+]

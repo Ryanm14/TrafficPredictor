@@ -29,8 +29,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-maps:10.0.0'
-    compile 'io.paperdb:paperdb:2.0'
     compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'io.paperdb:paperdb:2.0'
 
 }

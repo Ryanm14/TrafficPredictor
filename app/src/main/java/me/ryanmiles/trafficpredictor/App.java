@@ -27,7 +27,7 @@ public class App extends Application {
         //Initialize Saving Library
         Paper.init(this);
         //Temp
-        //SaveData.delete();
+        // SaveData.delete();
 
         //Initalize JsonUtil
         mJsonUtil = new JsonUtil(this);

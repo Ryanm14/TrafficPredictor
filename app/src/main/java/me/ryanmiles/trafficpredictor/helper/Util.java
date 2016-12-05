@@ -60,7 +60,7 @@ public class Util {
     }
 
 
-    public static String makeURL(String sourcelat, String sourcelog, String destlat, String destlog) {
+    public static String makeURL(String sourcelat, String sourcelog, String destlat, String destlog, String apiKey) {
         StringBuilder urlString = new StringBuilder();
         urlString.append("https://maps.googleapis.com/maps/api/directions/json");
         urlString.append("?origin=");// from
@@ -72,7 +72,7 @@ public class Util {
         urlString.append(",");
         urlString.append(destlog);
         urlString.append("&sensor=false&mode=driving&alternatives=true");
-        urlString.append("&key=AIzaSyB99QV5Y97Pinr6I0W0Nem1HGGw37x38DE");
+        urlString.append("&key=" + apiKey);
         return urlString.toString();
     }
 
@@ -123,6 +123,18 @@ public class Util {
             return "#ffff00";
         } else {
             return "#ff0000";
+        }
+    }
+
+    public static String getApi(int apiCalls) {
+        if (apiCalls < 2250) {
+            return Constants.APIKEY1;
+        } else if (apiCalls < 4500) {
+            return Constants.APIKEY2;
+        } else if (apiCalls < 6750) {
+            return Constants.APIKEY3;
+        } else {
+            return Constants.APIKEY4;
         }
     }
 }
