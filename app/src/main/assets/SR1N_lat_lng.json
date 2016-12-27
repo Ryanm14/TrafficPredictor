@@ -1,0 +1,306 @@
+[
+  {
+    "link": 500013091,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013091&dnode=VDS",
+    "ca_pm": 8.01900000000001,
+    "lat": 36.964522,
+    "lng": -121.866408,
+    "abs_pm": 359.16
+  },
+  {
+    "link": 500011072,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011072&dnode=VDS",
+    "ca_pm": 88.577,
+    "lat": 36.724239,
+    "lng": -121.790028,
+    "abs_pm": 339.09
+  },
+  {
+    "link": 500011052,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011052&dnode=VDS",
+    "ca_pm": 84.991,
+    "lat": 36.675824,
+    "lng": -121.808276,
+    "abs_pm": 335.5
+  },
+  {
+    "link": 500014101,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500014101&dnode=VDS",
+    "ca_pm": 15.582,
+    "lat": 36.988313,
+    "lng": -121.998987,
+    "abs_pm": 366.92
+  },
+  {
+    "link": 500010101,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010101&dnode=VDS",
+    "ca_pm": 78.023,
+    "lat": 36.594593,
+    "lng": -121.869761,
+    "abs_pm": 328.56
+  },
+  {
+    "link": 500011032,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011032&dnode=VDS",
+    "ca_pm": 82.779,
+    "lat": 36.645899,
+    "lng": -121.816675,
+    "abs_pm": 333.29
+  },
+  {
+    "link": 500010093,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010093&dnode=VDS",
+    "ca_pm": 77.633,
+    "lat": 36.593216,
+    "lng": -121.876628,
+    "abs_pm": 328.17
+  },
+  {
+    "link": 500011092,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011092&dnode=VDS",
+    "ca_pm": 90.736,
+    "lat": 36.749832,
+    "lng": -121.767679,
+    "abs_pm": 341.25
+  },
+  {
+    "link": 405572,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=405572&dnode=VDS",
+    "ca_pm": 16.72,
+    "lat": 36.989426,
+    "lng": -122.020006,
+    "abs_pm": 368.06
+  },
+  {
+    "link": 500011233,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011233&dnode=VDS",
+    "ca_pm": 101.04,
+    "lat": 36.869807,
+    "lng": -121.770107,
+    "abs_pm": 350.15
+  },
+  {
+    "link": 500010142,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010142&dnode=VDS",
+    "ca_pm": 79.54,
+    "lat": 36.611936,
+    "lng": -121.85503,
+    "abs_pm": 330.08
+  },
+  {
+    "link": 500010073,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010073&dnode=VDS",
+    "ca_pm": 76.211,
+    "lat": 36.58253,
+    "lng": -121.895893,
+    "abs_pm": 326.75
+  },
+  {
+    "link": 500010031,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010031&dnode=VDS",
+    "ca_pm": 73.726,
+    "lat": 36.554647,
+    "lng": -121.910926,
+    "abs_pm": 324.26
+  },
+  {
+    "link": 500013071,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013071&dnode=VDS",
+    "ca_pm": 6.73500000000001,
+    "lat": 36.950319,
+    "lng": -121.851566,
+    "abs_pm": 357.87
+  },
+  {
+    "link": 500011063,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011063&dnode=VDS",
+    "ca_pm": 86.697,
+    "lat": 36.699496,
+    "lng": -121.803031,
+    "abs_pm": 337.21
+  },
+  {
+    "link": 500011222,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011222&dnode=VDS",
+    "ca_pm": 99.266,
+    "lat": 36.844294,
+    "lng": -121.771,
+    "abs_pm": 348.37
+  },
+  {
+    "link": 500011012,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011012&dnode=VDS",
+    "ca_pm": 81.04,
+    "lat": 36.628179,
+    "lng": -121.838021,
+    "abs_pm": 331.58
+  },
+  {
+    "link": 500014121,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500014121&dnode=VDS",
+    "ca_pm": 16.327,
+    "lat": 36.988674,
+    "lng": -122.012474,
+    "abs_pm": 367.67
+  },
+  {
+    "link": 500014111,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500014111&dnode=VDS",
+    "ca_pm": 16.014,
+    "lat": 36.988447,
+    "lng": -122.006802,
+    "abs_pm": 367.36
+  },
+  {
+    "link": 500011212,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011212&dnode=VDS",
+    "ca_pm": 98.194,
+    "lat": 36.828897,
+    "lng": -121.77196,
+    "abs_pm": 347.3
+  },
+  {
+    "link": 500011021,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011021&dnode=VDS",
+    "ca_pm": 81.577,
+    "lat": 36.634425,
+    "lng": -121.832281,
+    "abs_pm": 332.11
+  },
+  {
+    "link": 500010011,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010011&dnode=VDS",
+    "ca_pm": 72.33,
+    "lat": 36.53585,
+    "lng": -121.912881,
+    "abs_pm": 322.87
+  },
+  {
+    "link": 500010122,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010122&dnode=VDS",
+    "ca_pm": 78.547,
+    "lat": 36.600023,
+    "lng": -121.863401,
+    "abs_pm": 329.08
+  },
+  {
+    "link": 500011131,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011131&dnode=VDS",
+    "ca_pm": 95.175,
+    "lat": 36.790626,
+    "lng": -121.783337,
+    "abs_pm": 344.28
+  },
+  {
+    "link": 500011082,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011082&dnode=VDS",
+    "ca_pm": 90.362,
+    "lat": 36.745293,
+    "lng": -121.771374,
+    "abs_pm": 340.87
+  },
+  {
+    "link": 500014132,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500014132&dnode=VDS",
+    "ca_pm": 16.719,
+    "lat": 36.989422,
+    "lng": -122.019984,
+    "abs_pm": 368.06
+  },
+  {
+    "link": 500013062,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013062&dnode=VDS",
+    "ca_pm": 5.32299999999998,
+    "lat": 36.937899,
+    "lng": -121.8305,
+    "abs_pm": 356.46
+  },
+  {
+    "link": 500011143,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011143&dnode=VDS",
+    "ca_pm": 95.812,
+    "lat": 36.799902,
+    "lng": -121.78316,
+    "abs_pm": 344.92
+  },
+  {
+    "link": 405573,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=405573&dnode=VDS",
+    "ca_pm": 17.21,
+    "lat": 36.98669,
+    "lng": -122.024383,
+    "abs_pm": 368.55
+  },
+  {
+    "link": 500010041,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010041&dnode=VDS",
+    "ca_pm": 74.419,
+    "lat": 36.56444,
+    "lng": -121.911973,
+    "abs_pm": 324.95
+  },
+  {
+    "link": 500013052,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013052&dnode=VDS",
+    "ca_pm": 4.52300000000002,
+    "lat": 36.933761,
+    "lng": -121.817739,
+    "abs_pm": 355.66
+  },
+  {
+    "link": 500010021,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500010021&dnode=VDS",
+    "ca_pm": 72.757,
+    "lat": 36.541075,
+    "lng": -121.908778,
+    "abs_pm": 323.29
+  },
+  {
+    "link": 500011121,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011121&dnode=VDS",
+    "ca_pm": 94.386,
+    "lat": 36.780229,
+    "lng": -121.777463,
+    "abs_pm": 343.49
+  },
+  {
+    "link": 500014092,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500014092&dnode=VDS",
+    "ca_pm": 15.001,
+    "lat": 36.987544,
+    "lng": -121.988535,
+    "abs_pm": 366.34
+  },
+  {
+    "link": 500013081,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013081&dnode=VDS",
+    "ca_pm": 7.608,
+    "lat": 36.959977,
+    "lng": -121.861657,
+    "abs_pm": 358.74
+  },
+  {
+    "link": 500013031,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013031&dnode=VDS",
+    "ca_pm": 2.42500000000001,
+    "lat": 36.916454,
+    "lng": -121.788076,
+    "abs_pm": 353.56
+  },
+  {
+    "link": 500011241,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500011241&dnode=VDS",
+    "ca_pm": 101.544,
+    "lat": 36.87698,
+    "lng": -121.77097,
+    "abs_pm": 350.65
+  },
+  {
+    "link": 500013043,
+    "link-href": "http://pems.dot.ca.gov/?html_x=46&report_form=1&start_pm=322.86&end_pm=368.57&fwy=1&dir=N&station_id=500013043&dnode=VDS",
+    "ca_pm": 3.399,
+    "lat": 36.926518,
+    "lng": -121.800066,
+    "abs_pm": 354.54
+  }
+]
