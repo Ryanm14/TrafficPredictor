@@ -8,7 +8,6 @@ import com.aigestudio.wheelpicker.WheelPicker;
 import org.greenrobot.eventbus.EventBus;
 
 import me.ryanmiles.trafficpredictor.event.UpdateDoftwEvent;
-import me.ryanmiles.trafficpredictor.event.UpdateMonthEvent;
 import me.ryanmiles.trafficpredictor.event.UpdateTimesEvent;
 import me.ryanmiles.trafficpredictor.helper.Util;
 
@@ -42,9 +41,6 @@ public class MainActivity extends AppCompatActivity implements WheelPicker.OnIte
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
         switch (picker.getId()) {
-            case R.id.wheel_month:
-                EventBus.getDefault().post(new UpdateMonthEvent(position));
-                break;
             case R.id.wheel_dotw:
                 EventBus.getDefault().post(new UpdateDoftwEvent(position));
                 break;

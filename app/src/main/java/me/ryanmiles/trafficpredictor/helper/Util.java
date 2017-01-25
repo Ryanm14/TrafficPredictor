@@ -79,6 +79,7 @@ public class Util {
     public static List getMonths() {
         List<String> months = new ArrayList<>();
         months.add("January");
+        /*
         months.add("February");
         months.add("March");
         months.add("April");
@@ -90,6 +91,7 @@ public class Util {
         months.add("October");
         months.add("November");
         months.add("December");
+        */
         return months;
     }
 
