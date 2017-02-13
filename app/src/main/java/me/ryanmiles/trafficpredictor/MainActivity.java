@@ -32,10 +32,7 @@ public class MainActivity extends AppCompatActivity implements WheelPicker.OnIte
         mWheelPickerDotw.setOnItemSelectedListener(this);
         mWheelPickerTime.setData(Util.getTimes());
         mWheelPickerTime.setOnItemSelectedListener(this);
-
     }
-
-
 
 
     @Override

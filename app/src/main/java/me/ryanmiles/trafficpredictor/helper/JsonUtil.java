@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import me.ryanmiles.trafficpredictor.async.GetDirectionsAsync;
+import me.ryanmiles.trafficpredictor.model.Hour;
 import me.ryanmiles.trafficpredictor.model.LatLngData;
 import me.ryanmiles.trafficpredictor.model.Station;
 import me.ryanmiles.trafficpredictor.model.StationList;
@@ -187,4 +188,33 @@ public class JsonUtil {
         SaveData.saveCalls(apiCalls);
     }
 
+    public void calcDiff() {
+        ArrayList<LatLngData> latLngDatas = new ArrayList<>();
+        double sumPercantError = 0;
+        double totalCounts = 0;
+        String json = loadJSONFromAsset("data_compare2.json");
+        try {
+            JSONArray items = new JSONArray(json);
+            for (int i = 0; i < items.length(); i++) {
+                JSONObject jObj = null;
+                jObj = items.getJSONObject(i);
+                Station station = mStationList.getStation(jObj.getInt("VDS"));
+                for (Hour hour : station.getmMonths().get(0).getDays().get(1).getHours()) {
+                    double real = jObj.getInt(hour.getHour() + "");
+                    double delay = hour.getDelay();
+                    if (delay == 0.0) {
+                        delay += 1;
+                        real += 1;
+                    }
+                    sumPercantError += (Math.abs(real - delay) / delay);
+                    totalCounts++;
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        double finalvalue = (sumPercantError / totalCounts) * 100;
+        Log.wtf(TAG, "Final value: " + finalvalue + "%");
+    }
 }

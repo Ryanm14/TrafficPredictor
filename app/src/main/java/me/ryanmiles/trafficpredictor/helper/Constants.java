@@ -5,7 +5,7 @@ package me.ryanmiles.trafficpredictor.helper;
  */
 
 public class Constants {
-    public static final String[] mStationNames = {"I5N", "I10E", "I15N", "I210E", "I80E", "I450N", "SR1N", "SR4E", "US50E"};
+    public static final String[] mStationNames = {"I5N"};
     public static final String APIKEY1 = "AIzaSyB99QV5Y97Pinr6I0W0Nem1HGGw37x38DE";
     public static final String APIKEY2 = "AIzaSyCla2Om5EEpR7EhZ2bFqz-to65FuvH_NBg";
     public static final String APIKEY3 = "AIzaSyAdczZcnTHIXiLoiauuzp-B1SWYGPkttCQ";

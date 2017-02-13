@@ -64,5 +64,8 @@ public class App extends Application {
 
         //load delay json data to stations
         mJsonUtil.loadAllDelayData();
+
+
+        mJsonUtil.calcDiff();
     }
 }
